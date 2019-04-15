@@ -2,50 +2,29 @@
 
 \section{Introductie} % The \section*{} command stops section numbering
 \label{sec:introductie}
-
-Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
-
-Je beschrijft zeker:
-
-\begin{itemize}
-  \item de probleemstelling en context
-  \item de motivatie en relevantie voor het onderzoek
-  \item de doelstelling en onderzoeksvraag/-vragen
-\end{itemize}
-
+Be-Mobile houdt zich bezig met het verwerken van traffic data. Hierbij wordt gebruik gemaakt van een pipeline van verschillende microservices en API's die alle binnenkomende data verwerken. Om het proces dat de data doorloopt duidelijker te maken en om eventuele problemen in de toekomst makkelijker op te sporen, zal er overal gepaste logging aan toegevoegd worden. Real time worden er dus veel logs per seconde gegenereerd. Daarom is het belangrijk om de juiste logging framework en databank te implementeren. Het werk beschrijft dus een databankonderzoek. Meer bepaald het op zoek gaan naar de meest geschikte combinatie van een logging framework en databank om een grote, constante flow van logs te centraliseren en op te slaan. Welke databank kan het best dit soort data opslaan. Welk logging framework is het meest geschikt in deze omgeving?
+ 
+ Elke situatie in verband met data is anders. Het is daarom belangrijk eerst eigen onderzoek te verrichten in plaats van zomaar een databank te implementeren omdat deze in een andere situatie optimaal was.
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}
 \label{sec:state-of-the-art}
+Een eerste reden voor dit onderzoek is de populariteit van deze taal. \textcite{Rouse} stelt dat de groei hiervan te wijten is aan het feit dat Go een lichtgewicht, open source taal is die past in de microservices architecturen van vandaag. De programmeertaal Go is gereleased in 2012 en werd vooral gebruikt door Google \autocite{Golang}. De taal zelf heeft een grote community achter zich gekregen en blijft in populariteit groeien. Een andere reden voor dit onderzoek is het gebrek aan soortgelijke onderzoeken. Ongetwijfeld zijn er al onderzoeken zoals deze uitgevoerd, maar niet met de bedoeling om deze te publiceren, binnen een bedrijf bijvoorbeeld. Vandaar dat deze dus niet beschikbaar zijn online.  \textcite{Garcin} stelt dat Go reeds veel packages en interfaces heeft die gebruikt kunnen worden in database koppeling en logging. Aan opties dus geen gebrek. Daarom is het interessant om dit onderzoek uit te voeren.
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein. Dit kan bijvoorbeeld een literatuurstudie zijn. Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek? Wat is de relevantie met jouw onderzoek?
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Doll1954}! Denk zeker goed na welke werken je refereert en waarom.
-
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
-
-Je mag gerust gebruik maken van subsecties in dit onderdeel.
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
 \label{sec:methodologie}
-
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+Het onderzoek start met het onderzoeken welk soort databank het meest geschikt is voor het opslaan van log bestanden, een relationele of NoSQL databank. Eens een beslissing hierover gemaakt is, kan dieper worden gezocht naar welke van de gekozen soort databanken het beste passen bij deze soort data. Nadien zal ook een lijst van mogelijke frameworks gemaakt worden die instaan voor het produceren van logs. De volgende stap in het proces is het maken van een webservice aan de hand van een vue.js frontend en Go backend dat op hoog tempo logs produceert. Dit om de echte omgeving te simuleren. Daarna zal elke databank om beurt getest worden in deze webservice om uit te maken welke het meest performant is in deze omgeving. De logging frameworks kunnen in deze webservice ook getest worden. De resultaten zullen dan statistisch verwerkt worden om een conclusie te maken.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwachte resultaten}
 \label{sec:verwachte_resultaten}
-
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de stukken van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet hoe je je data gaat moeten structureren.
+Over resultaten kunnen er nog geen voorspellingen gemaakt worden, maar na een eerste literatuurstudie kan er verwacht worden dat een NoSQL databank het best zal fungeren in een omgeving zoals deze. De resultaten die geproduceerd zullen worden door de simulatie zullen over het algemeen niet erg verschillen tussen de verschillende databanken. 
 
 %---------- Verwachte conclusies ----------------------------------------------
 \section{Verwachte conclusies}
 \label{sec:verwachte_conclusies}
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+De combinatie van databank en logging framework is belangrijk en zal een grote rol spelen doorheen dit onderzoek. Het zal niet voldoende zijn om de meest performante databank uit te zoeken. Deze zal ook goed moeten kunnen samenwerken met de gekozen framework. Dit kan een extra moeilijkheid vormen doorheen het onderzoek.
 
