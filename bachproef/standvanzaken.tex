@@ -8,25 +8,12 @@
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 \section{Be-Mobile}
 \label{sec:Be-Mobile}
+Er zijn een groot aantal microservices door Be-Mobile ontwikkeld in Go om verkeersevents op te halen, te verwerken, en door te sturen. Een file met events wordt binnengehaald via een repository en naar JSON omgezet om naar Kafka te sturen. Kafka is een message broker. Dit is in essentie een message queue waarin volgorde kan gegarandeerd worden. Kafka zelf bestaat uit producer- en consumertopics, waar data respectievelijk naar geschreven en uit opgehaald wordt. Daarna worden de messages opgehaald uit kafka en wordt elk individueel event verrijkt met locatie, omschrijving, en andere zaken. Elke stap in de chain haalt de events op van Kafka, communiceert met API's om deze te verrijken en stuurt ze daarna terug naar een andere Kafka topic.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=0.2]{img/be-mobile-logo}
-    \caption[Be-Mobile logo]{Be-Mobile logo \cite{mobile2019}}
-\end{figure}
-Er zijn een groot aantal microservices door Be-Mobile ontwikkeld in Go om verkeersevents op te halen, te verwerken, en door te sturen. Een file met events wordt binnengehaald via een repository en naar JSON omgezet om naar kafka te sturen. Daarna worden de messages opgehaald uit kafka en wordt elk individueel event verrijkt met locatie, omschrijving, en andere zaken. Elke stap in de chain haalt de events op van kafka, communiceert met API's om deze te verrijken en stuurt ze daarna terug naar een andere kafka topic.
-
-Om deze microservice architectuur te runnen wordt gebruik gemaakt van Kubernetes en Docker. Elk event wordt niet door dezelfde chain van services gestuurd, er zijn meerdere mogelijke chains die doorlopen kunnen worden. De Kubernetes cluster bevat alle mogelijke chains waar elke service zijn eigen console heeft. Op het moment van het schrijven van dit werk is de enige logging die aanwezig is bij Be-Mobile de verzameling van console logs van Kubernetes. Om te debuggen moet er voortdurend gewisseld worden van console om het probleem te localiseren. Er is nog geen mogelijkheid tot filteren, gericht zoeken, of log metrics \autocite{jens2019}.
+Om deze microservice architectuur te runnen wordt gebruik gemaakt van Kubernetes en Docker. Deze twee technologiën zijn enorm belangrijk in het hele verhaal en worden nog verder uitgelegd in 2.4 Kubernetes, en 2.5 Docker. In het kort is Kubernetes een cluster van nodes die gebruik maken van gecontaineriseerde events. Deze containers worden mogelijk gemaakt dankzij Docker. Elk event wordt niet door dezelfde chain van services gestuurd, er zijn meerdere mogelijke chains die doorlopen kunnen worden. De Kubernetes cluster bevat alle mogelijke chains waar elke service zijn eigen console heeft. Op het moment van het schrijven van dit werk is de enige logging die aanwezig is bij Be-Mobile de verzameling van console logs van Kubernetes. Om te debuggen moet er voortdurend gewisseld worden van console om het probleem te localiseren. Er is nog geen mogelijkheid tot filteren, gericht zoeken, of log metrics \autocite{jens2019}.
 
 \section{Golang}
 \label{sec:Golang}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=2.5cm]{img/golang-logo}
-    \caption[Golang logo]{Golang logo \cite{Golang}}
-\end{figure}
-
 De taal die steeds meer gebruikt wordt in microservice architecturen is Go \Autocite{Sabic2018}. De redenen hiervoor worden mooi beschreven door IT Marketplace. Deze stelt dat microservices het best geschreven worden in Go omwille van:
 \begin{enumerate}
     \item “Go is snel en relatief snel te leren” \autocite{ITMarketplace2016};
@@ -38,7 +25,7 @@ Golang is een expressieve, beknopte, en efficiënte taal met een nadruk op concu
 \section{Microservices}
 \label{sec:microservices}
 
-Een microservice architectuur bestaat uit vele kleine services die elk hun eigen verantwoordelijkheid hebben, maar samen dezelfde functionaliteit bevatten als een monolithische architectuur. Het grote verschil met deze tweede is dus de structuur waarop deze is gebaseerd. Waar een monolithische architectuur bestaat uit één groot stuk software vol samenhangende componenten, bevat een microservice architectuur tientallen of zelfs honderden kleine services die met elkaar verbonden zijn in een chain. Events worden van de ene service naar de andere doorgestuurd, vaak door middel van een HTTP requests en message brokers \autocite{Casey2017}. 
+Een microservice architectuur bestaat uit vele kleine services die elk hun eigen verantwoordelijkheid hebben, maar samen dezelfde functionaliteit bevatten als een monolithische architectuur (zie figuur 2.1). Het grote verschil met deze tweede is dus de structuur waarop deze is gebaseerd. Waar een monolithische architectuur bestaat uit één groot stuk software vol samenhangende componenten, bevat een microservice architectuur tientallen of zelfs honderden kleine services die met elkaar verbonden zijn in een chain. Events worden van de ene service naar de andere doorgestuurd, vaak door middel van een HTTP requests en message brokers \autocite{Casey2017}. 
 
 \begin{figure}[ht]
     \centering
@@ -55,23 +42,23 @@ Be-Mobile maakt gebruik van een microservice architectuur om hun producten te on
 \section{Kubernetes}
 \label{sec:kubernetes}
 
+\subsection{Wat is Kubernetes?}
+De basis van Kubernetes is dat het een open-source systeem is voor het beheren van applicaties die in een container (zie 2.5 Docker) geplaatsd zijn. Containers zijn omhulsels voor services. Alles wat nodig is om de service te kunnen runnen, wordt voorzien door de container. Kubernetes draait als een samenhangende cluster (zie figuur 2.2) zodat men  componenten en services doorheen verschillende infrastructuren kan beheren. De manier waarop applicaties gehost worden hangt af van de manier waarop Kubernetes geconfigureerd is. Het is mogelijk om een applicatie te runnen als een DaemonSet, waardoor er in elke node een instantie van de applicatie gerund wordt. Ook zorgt deze configuratie er voor dat er automatisch een nieuwe instantie van de applicatie gecreëerd wordt bij het aanmaken van een nieuwe node. Dit is slechts een voorbeeld van de mogelijkheden van Kubernetes. De optimale configuraties van de onderzochte logging solutions komen later aan bod in TODO: REFEREER NAAR PROOF OF CONCEPT \autocite{ellingwood2018}.
+
 \begin{figure}[ht]
     \centering
-   \includegraphics[scale=0.3]{img/Kubernetes_logo}
-    \caption[Kubernetes logo]{Kubernetes logo \cite{kubernetes}}
+    \includegraphics[scale=0.4]{img/kubernetes_daemonset}
+    \caption[Kubernetes DaemonSet voorbeeld]{Kubernetes Daemonset voorbeeld \cite{techstories2017}}
 \end{figure}
 
-\subsection{Wat is Kubernetes?}
-De basis van Kubernetes is dat het een open-source systeem is voor het beheren van applicaties die in een container (zie 2.5 Docker) geplaatsd zijn. Kubernetes draait als een cluster zodat men  componenten en services doorheen verschillende infrastructuren kan beheren. De manier waarop applicaties gehost worden hangt af van de manier waarop Kubernetes geconfigureerd is. Het is mogelijk om een applicatie te runnen als een DaemonSet, waardoor er in elke node een instantie van de applicatie gerund wordt. Ook zorgt deze configuratie er voor dat er automatisch een nieuwe instantie van de applicatie gecreëerd wordt bij het aanmaken van een nieuwe node. Dit is slechts een voorbeeld van de mogelijkheden van Kubernetes. De optimale configuraties van de onderzochte logging solutions komen later aan bod in TODO: REFEREER NAAR PROOF OF CONCEPT \autocite{ellingwood2018}.
-
 \subsection{Architectuur}
-Kubernetes bestaat uit een master-minion architectuur waar een master server het brein van de cluster voorstelt. Deze is een gateway om verschillende API's bloot te stellen aan de gebruikers. Verder is de master ook verantwoordelijk voor het controleren van de gezondheid van de cluster, scheduling van alle taken, en de communicatie tussen alle componenten \autocite{ellingwood2018}.
+Kubernetes bestaat uit een master-minion architectuur (zie figuur 2.3) waar een master server het brein van de cluster voorstelt. Deze is een gateway om verschillende API's bloot te stellen aan de gebruikers. Verder is de master ook verantwoordelijk voor het controleren van de gezondheid van de cluster, scheduling van alle taken, en de communicatie tussen alle componenten \autocite{ellingwood2018}.
 
-De `minions' worden nodes (zie figuur 2.XXX) genoemd en zijn de servers waarop een of meerdere containers gerund worden. De nodes krijgen instucties van de master over wat er moet gebeuren met verschillende containers. Het creëren van nieuwe containers, het vernietigen van oude containers, en het forwarden van data zijn enkele van de taken van de nodes \autocite{ellingwood2018}.
+De `minions' worden nodes genoemd en zijn de servers waarop een of meerdere containers gerund worden. De nodes krijgen instucties van de master over wat er moet gebeuren met verschillende containers. Het creëren van nieuwe containers, het vernietigen van oude containers, en het forwarden van data zijn enkele van de taken van de nodes \autocite{ellingwood2018}.
 
-Een node bestaat uit een of meerdere pods. Elke pod is een groep van een of meerdere containers die gedeployed zijn. Deze pods zijn er om nog verder onderscheid te kunnen maken in de configuratie. Elke pod heeft een eigen IP adres binnen de cluster en elke container in een pod deelt een IP adres, hostnaam, en andere zaken \autocite{learnitguide2018}.
+Een node bestaat uit een of meerdere pods (zie figuur 2.3). Elke pod is een groep van een of meerdere containers die gedeployed zijn. Deze pods zijn er om nog verder onderscheid te kunnen maken in de configuratie. Elke pod heeft een eigen IP adres binnen de cluster en elke container in een pod deelt een IP adres, hostnaam, en andere zaken \autocite{learnitguide2018}.
 
-Om een cluster op te starten wordt gebruik gemaakt van configuratie files in de vorm van YAML files. Hierin wordt de gewenste structuur beschreven. De master server leest deze configuraties en delegeert de opdrachten aan zijn nodes om de gewenste structuur te bereiken \autocite{ellingwood2018}.
+Om een cluster op te starten wordt gebruik gemaakt van configuratie files in de vorm van YAML files. YAML staat voor `YAML Ain't Markup Language` en wordt gebruikt om configuratie mee te maken \autocite{grav}) Hierin wordt de gewenste structuur beschreven. De master server leest deze configuraties en delegeert de opdrachten aan zijn nodes om de gewenste structuur te bereiken \autocite{ellingwood2018}.
 
 \begin{figure}[ht]
     \centering
@@ -82,17 +69,11 @@ Om een cluster op te starten wordt gebruik gemaakt van configuratie files in de 
 \section{Docker}
 \label{sec:docker}
 
-\begin{figure}[ht]
-    \centering
-   \includegraphics[scale=0.4]{img/docker_logo}
-    \caption[Docker logo]{Docker logo \cite{docker}}
-\end{figure}
-
 \subsection{Situatie voor Docker}
-Voor de komst van Docker was de manier waarop software uitgevoerd werd volledig anders. Software laat het niet steeds toe om uitgevoerd te worden in dezelfde omgeving als een ander soort software. Maar hoe slaagde men er in om toch alle programma's werkende te krijgen? Ze maakten gebruik van virtual machines. Deze lieten toe om verscheidene programma's simultaan uit te voeren op dezelfde hardware. Hoewel virtuele machines een oplossing boden voor het probleem, de kost was hoog. Virtuele machines zijn zware software die elk enkele gigabytes in grootte zijn.Verder bracht deze oplossing andere problemen met zich mee  zoals software updates, continuous delivery, en continuous integration \autocite{yegulalp2018}.
+Voor de komst van Docker was de manier waarop software uitgevoerd werd volledig anders. Software laat het niet steeds toe om uitgevoerd te worden in dezelfde omgeving als een ander soort software. Maar hoe slaagde men er in om toch alle programma's werkende te krijgen? Ze maakten gebruik van virtual machines. Deze lieten toe om verscheidene programma's simultaan uit te voeren op dezelfde hardware. Hoewel virtuele machines een oplossing boden voor het probleem, was de kost hoog. Virtuele machines zijn zware software die elk enkele gigabytes in grootte zijn.Verder bracht deze oplossing andere problemen met zich mee  zoals software updates, continuous delivery, en continuous integration \autocite{yegulalp2018}.
 
 \subsection{De oplossing}
-Docker containers zijn de oplossing voor dit probleem. Ze zijn licht, draagbaar, en flexibel. De manier waarop ze werken is simpel. Elk programma of stuk software wordt omhuld in een container die afzonderlijk draaiende wordt gehouden zoals een virtuele machine. Kortom wil dit zeggen dat alles geïsoleerd wordt en er dus geen problemen ontstaan met componenten die niet samen kunnen uitgevoerd worden. Zoals reeds besproken maakt Kubernetes uitstekend gebruik van containers. Het brengt deze met elkaar in contact of houdt ze net gescheiden. Zo kunnen containers die afhangen van elkaar, aan elkaar vastgehaakt worden in een pod. Een andere functionaliteit van Docker container is de herbruikbaarheid. Eens een container aangemaakt is kan deze via Kubernetes meerdere malen herbruikt worden of simultaan uitgevoerd worden \autocite{yegulalp2018}.
+Docker containers zijn de oplossing voor dit probleem. Ze zijn licht, draagbaar, en flexibel. De manier waarop ze werken is simpel (zie figuur 2.4). Elk programma of stuk software wordt omhuld in een container die afzonderlijk draaiende wordt gehouden zoals een virtuele machine. Kortom wil dit zeggen dat alles geïsoleerd wordt en er dus geen problemen ontstaan met componenten die niet samen kunnen uitgevoerd worden. Zoals reeds besproken maakt Kubernetes uitstekend gebruik van containers. Het brengt deze met elkaar in contact of houdt ze net gescheiden. Zo kunnen containers die afhangen van elkaar, aan elkaar vastgehaakt worden in een pod. Een andere functionaliteit van Docker container is de herbruikbaarheid. Eens een container aangemaakt is kan deze via Kubernetes meerdere malen herbruikt worden of simultaan uitgevoerd worden \autocite{yegulalp2018}.
 
 \begin{figure}[ht]
     \centering
@@ -134,20 +115,13 @@ Logrus:
 \end{itemize}
 
 \subsection{Logrus}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=1]{img/logrus-logo}
-    \caption[Logrus logo]{Logrus logo \cite{sirupsen2014}}
-\end{figure}
-
-“Logrus is een gestructureerde logger voor Go, volledig API compatibel met de standaard library logger” (sirupsen, s.d.). Logrus is een uitbreiding op de standaard library logger. Het biedt een wijd gamma aan functionaliteit bij het loggen van events. De verschillende levels waarin gelogd kan worden zijn: Trace, Debug, Info, Warning, Error, Panic, en Fatal. Deze levels zorgen voor een duidelijke weergave van het gelogde event. Hiermee kan de gebruiker, indien deze gebruik maakt van een log collector, filteren op level en zo vlotter de verschillende events doorlopen tijdens het debuggen. Verder kunnen ook nog andere fields toegevoegd worden die de gebruiker extra mogelijkheden biedt tijdens het filteren. Ten slotte kunnen de logs zowel de console als een wijd gamma andere keuzes als output gebruiken. Logrus kan gebruik maken van hooks om de data door te sturen naar message brokers zoals redis en kafka, alsook naar een file die lokaal opgeslagen kan worden \autocite{sirupsen2014}.
+“Logrus is een gestructureerde logger voor Go, volledig API compatibel met de standaard library logger” (sirupsen, s.d.). Logrus is een uitbreiding op de standaard library logger. Het biedt een wijd gamma aan functionaliteit bij het loggen van events. De verschillende levels waarin gelogd kan worden zijn: Trace, Debug, Info, Warning, Error, Panic, en Fatal. Deze levels zorgen voor een duidelijke weergave van het gelogde event. Hiermee kan de gebruiker, indien deze gebruik maakt van een log collector, filteren op level en zo vlotter de verschillende events doorlopen tijdens het debuggen. Verder kunnen ook nog andere fields toegevoegd worden die de gebruiker extra mogelijkheden biedt tijdens het filteren. Ten slotte kunnen de logs zowel de console als een wijd gamma andere keuzes als output gebruiken. Logrus kan gebruik maken van hooks om de data door te sturen naar message brokers zoals redis en kafka, alsook naar een file die lokaal opgeslagen kan worden. Hooks zijn zoals de term al doet vermoeden inhakingen op logrus. Hiermee kan er vooraleer de logs in de output verschijnen nog iets met gedaan worden \autocite{sirupsen2014}.
 
 \subsection{Tracing}
 
-Naast logs is er nog een tweede soort data die belangrijk is in microservices, trace data. De bedoeling van dit soort data is het achterhalen van de volledige chain die doorlopen wordt door een enkel event. Doorheen de chain kan dan gekeken worden hoelang elke microservice gewerkt heeft of hoelang een bepaalde API-call heeft geduurd. Deze data kan daarna gebruikt worden om metrics mee te maken, bv. De gemiddelde duur van een API-call. Zo kunnen uitschieters onderzocht worden om tot de kern van een probleem te komen \autocite{Rouse2018}.
+Naast logs is er nog een tweede soort data die belangrijk is in microservices, trace data. De bedoeling van dit soort data is het achterhalen van de volledige chain die doorlopen wordt door een enkel event. Doorheen de chain kan dan gekeken worden hoelang elke microservice gewerkt heeft of hoelang een bepaalde API-call heeft geduurd (zie figuur 2.5). Deze data kan daarna gebruikt worden om metrics mee te maken, bv. De gemiddelde duur van een API-call. Zo kunnen uitschieters onderzocht worden om tot de kern van een probleem te komen \autocite{Rouse2018}.
 
-OpenTracing is een speficatie welke gebruikt wordt door de grootste Tracers. Omdat OpenTracing vendor-neutral is kan men dus kiezen welke Tracer men uiteindelijk wil gebruiken bij het verzamelen van traces (Rouse, 2018). De meest gebruikte Tracers voor Go zijn Zipkin en Jaeger \autocite{Sabic2018}.
+OpenTracing is een specificatie welke gebruikt wordt door de grootste Tracers. Omdat OpenTracing vendor-neutral is kan men dus kiezen welke Tracer men uiteindelijk wil gebruiken bij het verzamelen van traces (Rouse, 2018). De meest gebruikte Tracers voor Go zijn Zipkin en Jaeger \autocite{Sabic2018}.
 
 \begin{figure}[ht]
     \includegraphics[scale=0.4]{img/tracing_voorbeeld}
@@ -156,7 +130,7 @@ OpenTracing is een speficatie welke gebruikt wordt door de grootste Tracers. Omd
 
 \subsection{Metrics}
 
-De derde en laatste soort data die gebruikt wordt om een applicatie te monitoren is metrics. Deze houden de systeembeheerders op de hoogte van de status van de applicatie. Dit werk maakt een vergelijkende studie tussen de meest populaire logging solutions, dus buiten deze korte introductie zal er niet verder ingegaan worden op metrics. Metrics maken het mogelijk om in een oogopslag de algemene gezondheid van een applicatie te zien. Er wordt gebruik gemaakt van grafieken en statistieken om dit weer te geven. Het verschil met tracing is dat metrics de volledige situatie van een applicatie omvatten en tracing een detail observatie is van bepaalde events of services in de applicatie \autocite{reichert2018}.
+De derde en laatste soort data die gebruikt wordt om een applicatie te monitoren is metrics. Deze houden de systeembeheerders op de hoogte van de status van de applicatie. Dit werk maakt een vergelijkende studie tussen de meest populaire logging solutions, dus buiten deze korte introductie zal er niet verder ingegaan worden op metrics. Metrics maken het mogelijk om in een oogopslag de algemene gezondheid van een applicatie te zien (zie figuur 2.6). Er wordt gebruik gemaakt van grafieken en statistieken om dit weer te geven. Het verschil met tracing is dat metrics de volledige situatie van een applicatie omvatten en tracing een detail observatie is van bepaalde events of services in de applicatie \autocite{reichert2018}.
 \\
 \begin{figure}[ht]
     \centering
@@ -169,7 +143,13 @@ De derde en laatste soort data die gebruikt wordt om een applicatie te monitoren
 
 \subsection{Wat is een logging solution en hoe werkt het?}
 Voor er meer in detail gegaan wordt over de logging solutions die getest werden in dit werk, zal er een definitie beschreven worden wat beschouwd wordt als een logging solution.
-Een logging solution is een tool of een combinatie van tools die toelaat om efficiënt aan log management te doen. Het hele proces van logging doorloopt verschillende stappen \autocite{logdna2018}. 
+Een logging solution is een tool of een combinatie van tools die toelaat om efficiënt aan log management te doen. Het hele proces van logging doorloopt verschillende stappen (figuur 2.7) \autocite{logdna2018}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.6]{img/log_proces}
+    \caption[Het logging proces]{Het logging proces \cite{nastel}}
+\end{figure}
 
 \begin{enumerate}
     \item Data collectie: Ingestion en log aggregation. Een eerste stap hierbij is data die verzameld wordt vanuit verschillende bronnen. Deze bronnen kunnen de console logs zijn, de opgeslagen log files, syslog, etc. De verantwoordelijk voor dit proces is een collector. De tweede stap is het correct formateren van de verzamelde logs. Zonder deze stap zou de data niet uniform genoeg zijn om in een latere fase de analyse hierop uit te voeren \autocite{logdna2018}. 
@@ -192,14 +172,7 @@ Wat is er belangrijk bij het zoeken naar een logging solution? Waar moet rekenin
 \end{enumerate}
 
 \subsection{ELK}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=0.7]{img/ELK-logo}
-    \caption[ELK stack logo]{ELK stack logo \cite{berman2018-12}}
-\end{figure}
-
-ELK is een acronym voor Elasticsearch, Logstash, Kibana. Dit zijn de drie componenten die een ELK stack bevat. Vaak wordt bovenop deze componenten ook gebruik gemaakt van Beats. Dit is een lichtgewicht data collector die handig kan zijn bij Kubernetes deployments met vele nodes. Bij complexe pipelines zoals Be-Mobile waar een hoge throughput aan data aanwezig is, wordt aangeraden om gebruik te maken van een message broker tussen de data collectie en data processing die voor een betrouwbare volgorde zorgt. Voorbeelden hiervan zijn Kafka, RabbitMQ, Redis \autocite{berman2018-12}. 
+ELK is een acronym voor Elasticsearch, Logstash, Kibana. Dit zijn de drie componenten die een ELK stack bevat. Vaak wordt bovenop deze componenten ook gebruik gemaakt van Beats. Dit is een lichtgewicht data collector die handig kan zijn bij Kubernetes deployments met vele nodes. Bij complexe pipelines zoals Be-Mobile waar een hoge throughput aan data aanwezig is, wordt aangeraden om gebruik te maken van een message broker tussen de data collectie en data processing die voor een betrouwbare volgorde zorgt. Voorbeelden hiervan zijn Kafka, RabbitMQ, Redis (zie figuur 2.8) \autocite{berman2018-12}. 
 
 \begin{figure}[ht]
     \centering
@@ -216,10 +189,10 @@ De ELK stack is een goede logging oplossing omdat het een enorm krachtige tool i
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.15 ]{img/EFK_logo}
-    \caption[EFK stack logo]{EFK stack logo \cite{petrausch}}
+    \caption[EFK stack]{EFK stack \cite{petrausch}}
 \end{figure}
 
-Soortgelijk aan ELK, is EFK een acronym voor Elasticsearch, Fluentd, Kibana. Hierbij wordt op een soortgelijke manier gewerkt als bij ELK maar wordt Logstash vervangen door Fluentd. De redenen hiervoor zullen hieronder verder uitgelegd worden. Wanneer gewerkt wordt met Kubernetes moet de afweging gemaakt worden tussen gebruik van Fluentd en Fluentbit. Deze laatste is een nieuwere, kleinere variant van de eerste. Qua functionaliteit zijn ze beiden bijna evenwaardig met als enige grote verschil het aantal ondersteunde plugins wat veel hoger is bij Fluentd. De grote kracht van Fluentbit is dan weer de grootte ervan. Met slechts 450KB is de voetafdruk van Fluentbit op gedistribueerde omgevingen enorm klein in vergelijking met Fluentd. Fluentbit is dan ook ontwikkeld met gedistribueerde omgevingen als primaire use case \autocite{berman2018-06}.
+Soortgelijk aan ELK, is EFK een acronym voor Elasticsearch, Fluentd, Kibana (zie figuur 2.9). Hierbij wordt op een soortgelijke manier gewerkt als bij ELK maar wordt Logstash vervangen door Fluentd. De redenen hiervoor zullen hieronder verder uitgelegd worden. Wanneer gewerkt wordt met Kubernetes moet de afweging gemaakt worden tussen gebruik van Fluentd en Fluentbit. Deze laatste is een nieuwere, kleinere variant van de eerste. Qua functionaliteit zijn ze beiden bijna evenwaardig met als enige grote verschil het aantal ondersteunde plugins wat veel hoger is bij Fluentd. De grote kracht van Fluentbit is dan weer de grootte ervan. Met slechts 450KB is de voetafdruk van Fluentbit op gedistribueerde omgevingen enorm klein in vergelijking met Fluentd. Fluentbit is dan ook ontwikkeld met gedistribueerde omgevingen als primaire use case \autocite{berman2018-06}.
 
 Deze verschillen tussen Logstash en Fluentd zijn als volgt:
 \begin{enumerate}
@@ -232,25 +205,11 @@ Deze verschillen tussen Logstash en Fluentd zijn als volgt:
 Om optimaal gebruik te maken van de EFK stack in een gedistribueerde omgeving op een Kubernetes cluster moet gebruik gemaakt worden van zowel Fluentbit als Fluentd. In deze setup bevat elke node in de cluster een Fluentbit instantie die de logs van die node verzameld en doorstuurt naar de algemene Fluentd instantie op de cluster. Deze fungeert als aggregator en verwerkt de logs om ze daarna door te sturen naar de gekozen output \autocite{berman2018-06}.
 
 \subsection{Graylog}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=0.1]{img/graylog}
-    \caption[Graylog logo]{Graylog logo \cite{graylog}}
-\end{figure}
-
 Graylog is ontstaan in 2009 in een tijd waar logging oplossingen, laat staan open source logging oplossingen quasi onbestaand waren. De marktleider in die tijd had een kostelijke licentie en daarom ontwikkelde de oprichter van Graylog een eigen open source oplossing. Dit wil zeggen dat Graylog vanaf het begin al een logging oplossing hoorde te zijn. Dit in tegenstelling tot ELK op basis van Elasticsearch, welke een full text search engine is. Graylog maakt zelf ook nog steeds gebruik van Elasticsearch als opslagplaats maar de Graylog server die voor de databank zit wordt het gebruik ervan geoptimaliseerd voor logs \autocite{graylog}.
 
 De ouderdom van de Graylog betekent dat deze niet is geoptimaliseerd voor het gebruik ervan in een gedistribueerde omgeving zoals een Kubernetes cluster. Er is wel reeds documentatie toegevoegd om Graylog werkende te krijgen op een Kubernetes cluster \autocite{lumiq2017}.  
 
 \subsection{Grafana Loki}
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[scale=0.4]{img/loki}
-    \caption[Grafana Loki logo]{Grafana Loki logo \cite{loki}}
-\end{figure}
-
 De meest recente logging solution, nog steeds in alfa ontwikkeling maar wel reeds beschikbaar. Wat meteen duidelijk wordt, is dat Loki ontwikkeld is voor het gebruik in grote, complexe, gedistribueerde omgevingen. Het is ontwikkeld om zoveel mogelijk logs te kunnen opslaan voor zo weinig mogelijk geld. Tot hiertoe zijn alle databanken gebaseerd op volledige indexering bij het opslaan van logs, dit zorgt voor heel wat opslagruimte die noodzakelijk is om alles draaiende te houden. Loki stapt af van indexering en is gebaseerd op Prometheus, een ander product van Grafana dat gebruikt wordt voor de opslag van metrics. De manier waarop Loki logs opslaat, werkt op basis van labels en enkel de metadata wordt geïndexeerd \autocite{oleksii2019}.
 
 \begin{figure}[ht]
@@ -266,6 +225,6 @@ De meest recente logging solution, nog steeds in alfa ontwikkeling maar wel reed
 Een loki 'stack' bestaat uit 3 belangrijke componenten:
 \begin{enumerate}
    \item Promtail is verantwoordelijk voor het verzamelen van logs. Het is een scraper die op zoek gaat in alle Kubernetes pods naar log files en deze daarna doorstuurt naar Loki. Promtail wordt geïnitialiseerd op basis van een config file waarin beschreven wordt welke log files doorgestuurd worden, welke genegeerd worden, en welke anders genoemd worden. Soortgelijk aan Fluentbit zal Promtail ook in elke node aanwezig zijn en logs doorsturen naar een algemene loki instantie \autocite{veeramachaneni2018}.
-   \item Loki is de datasource van de stack. Het maakt gebruikt van een distributor (zie figuur 2.16) om logs te verspreiden over verschillende ingesters (zie figuur 2.17) vooraleer de logs in een databank terecht komen. De manier waarop Loki logs opslaat is ook anders dan de concurrentie. De ingesters verzamelen soortgelijke logs in chunks. Wanneer een chunck opgevuld is, wordt deze opgeslagen in een Object Storage. Default is dit een lokale Object Storage. De indexen van deze logs worden daarna in een NoSQL database opgeslagen om snel opgehaald te kunnen worden. Deze manier van opslag zorgt voor een snelle ophaling van logs wanneer deze opgevraagd worden in Grafana. Ook zorgt deze manier van opslag voor een grote schaalbaarheid \autocite{veeramachaneni2018}.
+   \item Loki is de datasource van de stack. Het maakt gebruikt van een distributor (zie figuur 2.10) om logs te verspreiden over verschillende ingesters (zie figuur 2.11) vooraleer de logs in een databank terecht komen. De manier waarop Loki logs opslaat is ook anders dan de concurrentie. De ingesters verzamelen soortgelijke logs in chunks. Wanneer een chunck opgevuld is, wordt deze opgeslagen in een Object Storage. Default is dit een lokale Object Storage. De indexen van deze logs worden daarna in een NoSQL database opgeslagen om snel opgehaald te kunnen worden. Deze manier van opslag zorgt voor een snelle ophaling van logs wanneer deze opgevraagd worden in Grafana. Ook zorgt deze manier van opslag voor een grote schaalbaarheid \autocite{veeramachaneni2018}.
    \item Grafana is de frontend die zowel Loki als Prometheus en andere bronnen kan gebruiken als data source. Hier worden de logs gevisualiseerd. Op moment van schrijven van dit werk is er enkel tekstuele filtreerbaarheid beschikbaar op basis van een eigen query taal van Grafana. Ook deze is nog onder constructie en verwacht binnenkort een upgrade. Nummers worden dan ook filtreerbaar met mogelijkheid tot filteren op datum of bepaalde getallen vergelijken \autocite{githubLoki2019, veeramachaneni2018}. 
 \end{enumerate}
