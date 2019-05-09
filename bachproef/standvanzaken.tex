@@ -43,7 +43,7 @@ Be-Mobile maakt gebruik van een microservice architectuur om hun producten te on
 \label{sec:kubernetes}
 
 \subsection{Wat is Kubernetes?}
-De basis van Kubernetes is dat het een open-source systeem is voor het beheren van applicaties die in een container (zie 2.5 Docker) geplaatsd zijn. Containers zijn omhulsels voor services. Alles wat nodig is om de service te kunnen runnen, wordt voorzien door de container. Kubernetes draait als een samenhangende cluster (zie figuur 2.2) zodat men  componenten en services doorheen verschillende infrastructuren kan beheren. De manier waarop applicaties gehost worden hangt af van de manier waarop Kubernetes geconfigureerd is. Het is mogelijk om een applicatie te runnen als een DaemonSet, waardoor er in elke node een instantie van de applicatie gerund wordt. Ook zorgt deze configuratie er voor dat er automatisch een nieuwe instantie van de applicatie gecreëerd wordt bij het aanmaken van een nieuwe node. Dit is slechts een voorbeeld van de mogelijkheden van Kubernetes. De optimale configuraties van de onderzochte logging solutions komen later aan bod in TODO: REFEREER NAAR PROOF OF CONCEPT \autocite{ellingwood2018}.
+De basis van Kubernetes is dat het een open-source systeem is voor het beheren van applicaties die in een container (zie 2.5 Docker) geplaatsd zijn. Containers zijn omhulsels voor services. Alles wat nodig is om de service te kunnen runnen, wordt voorzien door de container. Kubernetes draait als een samenhangende cluster (zie figuur 2.2) zodat men  componenten en services doorheen verschillende infrastructuren kan beheren. De manier waarop applicaties gehost worden hangt af van de manier waarop Kubernetes geconfigureerd is. Het is mogelijk om een applicatie te runnen als een DaemonSet, waardoor er in elke node een instantie van de applicatie gerund wordt. Ook zorgt deze configuratie er voor dat er automatisch een nieuwe instantie van de applicatie gecreëerd wordt bij het aanmaken van een nieuwe node. Dit is slechts een voorbeeld van de mogelijkheden van Kubernetes. De optimale configuraties van de onderzochte logging solutions komen later aan bod in de bijlagen van dit werk \autocite{ellingwood2018}.
 
 \begin{figure}[ht]
     \centering
@@ -59,6 +59,8 @@ De `minions' worden nodes genoemd en zijn de servers waarop een of meerdere cont
 Een node bestaat uit een of meerdere pods (zie figuur 2.3). Elke pod is een groep van een of meerdere containers die gedeployed zijn. Deze pods zijn er om nog verder onderscheid te kunnen maken in de configuratie. Elke pod heeft een eigen IP adres binnen de cluster en elke container in een pod deelt een IP adres, hostnaam, en andere zaken \autocite{learnitguide2018}.
 
 Om een cluster op te starten wordt gebruik gemaakt van configuratie files in de vorm van YAML files. YAML staat voor `YAML Ain't Markup Language` en wordt gebruikt om configuratie mee te maken \autocite{grav}) Hierin wordt de gewenste structuur beschreven. De master server leest deze configuraties en delegeert de opdrachten aan zijn nodes om de gewenste structuur te bereiken \autocite{ellingwood2018}.
+
+Er is ook mogelijkheid tot lokaal testen. Hiervoor wordt Minikube gebruikt. Minikube maakt een lokale cluster aan met één node waarin een aantal pods aangemaakt kunnen worden. Op deze manier is het mogelijk configuraties te testen voordat deze gebruikt worden in productie \autocite{ellingwood2018}.
 
 \begin{figure}[ht]
     \centering
@@ -185,6 +187,7 @@ De werking van ELK gaat als volgt. Logs worden geproduceerd en opgeslagen in fil
 De ELK stack is een goede logging oplossing omdat het een enorm krachtige tool is in combinatie met een gemakkelijk installatie. Naast zijn vele voordelen zijn er ook wat mindere punten aan de ELK stack die genoemd moeten worden. Hoewel de basis installatie vrij simpel uit te voeren is, wordt deze al snel ingewikkelder naargelang de grootte van de cluster waarop deze geïnstalleerd wordt. Er zijn veel factoren waar rekening gehouden mee moet worden en een verkeerde implementatie kan leiden tot inefficiëntie of zelfs crashes op lange termijn. Om deze reden hoort er genoeg aandacht besteed te worden aan resource management bij het opzetten van de ELK stack \autocite{gifford2016}.
 
 \subsection{EFK}
+\label{subsec:EFK}
 
 \begin{figure}[ht]
     \centering
@@ -196,16 +199,18 @@ Soortgelijk aan ELK, is EFK een acronym voor Elasticsearch, Fluentd, Kibana (zie
 
 Deze verschillen tussen Logstash en Fluentd zijn als volgt:
 \begin{enumerate}
-    \item Taal. Logstash is geschreven in JRuby welke een Java implementatie is van Ruby en dus een Java Runtime vereist. Fluentd daarentegen is geschreven in CRuby, een C implementatie van Ruby en heeft dus minder vereisten qua omgeving \autocite{harikumar2018}.
+    \item Taal. Logstash is geschreven in JRuby welke een Java implementatie is van Ruby en dus een Java Runtime vereist. Fluentd daarentegen is geschreven in CRuby, een C implementatie van Ruby en heeft dus minder vereisten qua omgeving.  \autocite{harikumar2018}.
     \item De routing van events. Waar Logstash voor routing zorgt door gebruik te maken van if-then statements, gebruikt Fluentd tags om hetzelfde te doen. Fluentd lijkt daarop iets makkelijk om te configureren \autocite{harikumar2018}.
     \item Plugins. Zoals eerder vermeld heeft Fluentd een enorm grote hoeveelheid plugins met meer dan 350 plugins voor input, output, of verwerking van data. Logstash beschikt ook over een aantal plugins. Het grote verschil zit in de plaats waar deze plugins te vinden zijn. In tegenstelling tot Fluentd is er bij Logstash wel een gecentraliseerde github repository waar alle plugins te vinden zijn \autocite{harikumar2018}.
     \item Message queue. Door gebruik te maken van Fluentd of Fluentbit wordt de nood aan een message broker geëlimineerd. Fluentd heeft namelijk een ingebouwde message queue die alle inkomende messages zelf correct verwerkt. Hierdoor kan Fluentd, in tegenstelling tot Logstash, geïmplementeerd worden in complexe systemen zonder externe message broker \autocite{harikumar2018}. 
+    \item Geheugenverbruik. Waar Logstash gemiddeld 120MB aan geheugen gebruikt, zal Fluentd hetzelfde kunnen doen met maar 40MB. Beide blijven aan de hoge kant wanneer men een situatie schetst waar gebruik gemaakt wordt van honderden servers. De ontwikkelaars van beide log verzamelaars hebben een oplossing uitgebracht. Voor Logstash is dit Filebeat met een gemiddeld geheugen gebruik van 1,8MB. Voor Fluentd is dit Fluentbit met een gemiddeld geheugen gebruik van 450KB \autocite{peri2015}.
 \end{enumerate}
 
-Om optimaal gebruik te maken van de EFK stack in een gedistribueerde omgeving op een Kubernetes cluster moet gebruik gemaakt worden van zowel Fluentbit als Fluentd. In deze setup bevat elke node in de cluster een Fluentbit instantie die de logs van die node verzameld en doorstuurt naar de algemene Fluentd instantie op de cluster. Deze fungeert als aggregator en verwerkt de logs om ze daarna door te sturen naar de gekozen output \autocite{berman2018-06}.
+Om optimaal gebruik te maken van de EFK stack in een gedistribueerde omgeving op een Kubernetes cluster moet gebruik gemaakt worden van zowel Fluentbit als Fluentd. In deze setup bevat elke node in de cluster een Fluentbit pod die de logs van die node verzameld en doorstuurt naar de algemene Fluentd pod op de cluster. Deze fungeert als aggregator en verwerkt de logs om ze daarna door te sturen naar de gekozen output \autocite{berman2018-06}.
 
 \subsection{Graylog}
-Graylog is ontstaan in 2009 in een tijd waar logging oplossingen, laat staan open source logging oplossingen quasi onbestaand waren. De marktleider in die tijd had een kostelijke licentie en daarom ontwikkelde de oprichter van Graylog een eigen open source oplossing. Dit wil zeggen dat Graylog vanaf het begin al een logging oplossing hoorde te zijn. Dit in tegenstelling tot ELK op basis van Elasticsearch, welke een full text search engine is. Graylog maakt zelf ook nog steeds gebruik van Elasticsearch als opslagplaats maar de Graylog server die voor de databank zit wordt het gebruik ervan geoptimaliseerd voor logs \autocite{graylog}.
+\label{subsec:graylog}
+Graylog is ontstaan in 2009 in een tijd waar logging oplossingen, laat staan open source logging oplossingen quasi onbestaand waren. De marktleider in die tijd had een kostelijke licentie en daarom ontwikkelde de oprichter van Graylog een eigen open source oplossing. Dit wil zeggen dat Graylog vanaf het begin al een logging oplossing hoorde te zijn. Dit in tegenstelling tot ELK op basis van Elasticsearch, welke een full text search engine is. Graylog maakt zelf ook nog steeds gebruik van Elasticsearch als opslagplaats maar dankzij de Graylog server die voor de databank gepositioneerd is wordt het gebruik ervan geoptimaliseerd voor logs \autocite{graylog}.
 
 De ouderdom van de Graylog betekent dat deze niet is geoptimaliseerd voor het gebruik ervan in een gedistribueerde omgeving zoals een Kubernetes cluster. Er is wel reeds documentatie toegevoegd om Graylog werkende te krijgen op een Kubernetes cluster \autocite{lumiq2017}.  
 

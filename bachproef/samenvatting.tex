@@ -28,7 +28,7 @@
 \IfLanguageName{english}{%
 \selectlanguage{dutch}
 \chapter*{Samenvatting}
-\lipsum[1-4]
+
 \selectlanguage{english}
 }{}
 
@@ -37,4 +37,6 @@
 
 \chapter*{\IfLanguageName{dutch}{Samenvatting}{Abstract}}
 
-\lipsum[1-4]
+Dit onderzoek bespreekt de 4 belangrijkste open source logging oplossingen welke gebruikt kunnen worden bij het ontwikkelen van applicaties gebaseerd op een microservice architectuur. Dit onderzoek neemt de omgeving van Be-Mobile als voorbeeld en referentiepunt. Hier is sprake van een Kubernetes cluster van tientallen nodes. 
+
+Het onderzoek focust zich vooral op enkele kernpunten die elke goede logging oplossing moet bevatten. Ook wordt voor elke oplossing getoond hoe de installatie van elke oplossing wordt uitgevoerd. Verder wordt de theorie uitgelegd om deze ook op Kubernetes te installeren en configureren. Uit dit onderzoek komt naar voren dat er geen duidelijke meest geschikte open source logging oplossing is. Loki kan als meest geschikte aanschouwd worden maar deze oplossing is nog steeds onder constructie en zal pas binnen enkele maanden in productie gebruikt kunnen worden. Verder maken alle andere oplossingen gebruik van Elasticsearch wat voor redelijk wat geheugenverbruik zorgt. De meeste geschikte oplossing hierbij is de EFK stack.

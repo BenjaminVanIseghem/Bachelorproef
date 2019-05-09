@@ -11,7 +11,149 @@
 %% mogelijke manier toegepast hebt om een antwoord te vinden op de
 %% onderzoeksvraag.
 
-%%Fase 1: Opzetten van eigen 
+Na de onderzoeksfase van dit werk in de vorm van een literatuurstudie (zie Hoofdstuk~\ref{ch:stand-van-zaken}) volgt hieronder een requirementsanalyse die een opsomming maakt van de belangrijkste requirements. Deze zullen later in de conclusie (zie Hoofdstuk~\ref{ch:conclusie}) belangrijk zijn in het beoordelen van de meest geschikte oplossing in deze situatie. Wegens het gebrek aan open-source oplossingen zal dit werk slechts 4 oplossingen vergelijken namelijk: ELK, EFK, Graylog, en Loki. Dit zorgt ervoor dat een long en short list niet nodig zijn in dit onderzoek en deze zullen dus achterwege gelaten worden. 
 
-\lipsum[21-25]
+De uitwerking van een testomgeving zal als volgt gebeuren. Wegens de manier waarop de mensen achter Kubernetes Minikube hebben opgebouwd, is het niet mogelijk om meerdere nodes te installeren op een eigen Minikube. Bijgevolg is het dus niet mogelijk om een testomgeving op te zetten waarbij gebruik gemaakt wordt van meerdere nodes. Dit zorgt ervoor dat de complexiteit van de Kubernetes testomgeving drastisch daalt en vervangen kan worden door een lokale testomgeving. Hierbij zullen 2 Go services elk in hun eigen Docker container draaiende gehouden worden terwijl elk van de logging oplossingen getest zullen worden. De services bestaan uit een oneindige loop die steeds enkele logs per second zal produceren. Deze logs worden daarna opgeslagen in een logfile. Deze logfile wordt vervolgens gelezen door de log collector en doorgestuurd naar een opslagplaats. Als laatste worden de logs opgehaald uit de databank door een frontend die deze visualiseert voor de gebruiker.
+
+\textbf{\underline{Go Services}}\\
+\begin{lstlisting}[caption=Log generator main function]
+import (
+    "errors"
+    "os"
+    "time"
+    
+    "github.com/sirupsen/logrus"
+)
+
+func main() {
+    w, err := os.Create("/Users/benjaminvaniseghem/Documents/logs/logfile1.log")
+    if err != nil {
+        panic(err)
+    }
+    logger := logrus.New()
+    logger.SetOutput(w)
+    for {
+        logger.Info("Info message")
+        logger.Warn("Warning message")
+        logger.Error("Error message", errors.New("Error"))
+        time.Sleep(1200 * time.Millisecond)
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Log generator 2 main function ]
+import (
+    "errors"
+    "os"
+    "time"
+    
+    "github.com/sirupsen/logrus"
+)
+
+func main() {
+    w, err := os.Create("/Users/benjaminvaniseghem/Documents/logs/logfile2.log")
+    if err != nil {
+        panic(err)
+    }
+    logger := logrus.New()
+    logger.SetOutput(w)
+    for {
+        logger.Info("Info 2 message")
+        logger.Warn("Warning 2 message")
+        logger.Error("Error message 2", errors.New("Error"))
+        time.Sleep(1200 * time.Millisecond)
+    }
+}
+\end{lstlisting}
+
+Nadat deze testomgeving klaar is, zullen een voor een de gekozen logging oplossingen hierin getest worden. Hieronder wordt het hele testproces besproken.
+\begin{enumerate}
+    \item Als eerste gebeurt de installatie en het correct configureren van de benodigde software van de oplossing. 
+    \item Na de installatie zal gekeken worden naar de visualisatie van de logs. Hierbij wordt rekening gehouden met de mogelijkheden omtrent het implementeren van grafieken over de gegenereerde logs en alerting in bepaalde situaties.
+    \item De volgende stap is het ophalen van specifieke logs. Dit kan in veel gevallen door middel van een query taal of bepaalde filters te gebruiken.
+    \item Tot slot zal de installatie van de oplossing verwijderd worden zodat het proces zich kan herhalen met een andere oplossing.
+\end{enumerate}
+
+Om de testen te herhalen op een Kubernetes cluster zijn extra configuraties nodig. In het kader van dit onderzoek is het interessant om deze te bespreken. De extra configuraties van elke oplossing zullen besproken worden in hun eigen respectievelijke hoofdstuk.
+
+\textbf{\underline{Kubernetes config file}}\\
+Een Kubernetes config file bestaat uit veel parameters waardoor een service op veel manieren gedeployed kan worden. Hieronder zijn de belangrijkste algemene parameters opgesomd. In elk hoofdstuk van de logging oplossingen zullen de gebruikte parameters dieper uitgelegd worden.
+\begin{itemize}
+    \item apiVersion : Versie van de Kubernetes API dat gebruikt wordt
+    \item kind: Welk soort object gecreëerd moet worden. Een object kan een van de volgende zijn: \begin{itemize}
+        \item Pod
+        \item Service
+        \item Volume
+        \item Namespace
+        \item ReplicaSet
+        \item Deployment
+        \item StatefulSet
+        \item DaemonSet
+        \item Job
+    \end{itemize}
+    \item metadata: Extra informatie over het object om het makkelijker uniek te identificeren.
+    \item spec: Hier bevindt zich de specificaties omtrent het object. Dit is veranderlijk voor elk soort object.
+\end{itemize}
+
+\section{Requirementsanalyse}
+\begin{itemize}
+    \item \textbf{Functionele requirements}
+        \begin{itemize}
+             \item Moet kunnen scalen naargelang de groeiende Kubernetes cluster
+            \item Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kunnen doorsturen
+            \item Moet logs efficiënt opslaan en ophalen
+            \item Ondersteuning voor cluster omgevingen zoals Kubernetes
+            \item Ondersteuning voor alerts
+            \item Ondersteuning voor visualisatie zoals grafieken
+        \end{itemize}
+    \item \textbf{Niet-functionele requirements}
+        \begin{itemize}
+           \item Moet open source zijn
+           \item Moet (relatief) eenvoudig te configureren zijn
+           \item Moet (relatief) eenvoudig te gebruiken zijn
+           \item Moet goed gedocumenteerd zijn
+           \item Moet een zo klein mogelijke impact hebben op de servers
+           \item Moet de logs overzichtelijk kunnen tonen
+        \end{itemize}
+\end{itemize}
+
+Bovenstaande requirements kunnen als volgt ingedeeld worden met de MoSCoW-techniek \autocite{consortium}. Deze verdeeld de requirements in `Must have`, `Should have`, en `Could have` requirements. Deze verdelingen betekenen respectievelijk dat de requirement verplicht is, aanwezig zou moeten zijn maar niet doorslaggevend, of optioneel is.  
+
+\begin{itemize}
+    \item \textbf{Must have}
+    \begin{itemize}
+        \item Moet open source zijn
+        \item Ondersteuning voor cluster omgevingen zoals Kubernetes
+        \item Moet een zo klein mogelijke impact hebben op de servers
+        \item Moet kunnen scalen naargelang de groeiende Kubernetes cluster
+    \end{itemize}
+    \item \textbf{Should have}
+    \begin{itemize}
+        \item Moet (relatief) eenvoudig te configureren zijn
+        \item Moet (relatief) eenvoudig te gebruiken zijn
+        \item Moet goed gedocumenteerd zijn
+        \item Moet de logs overzichtelijk kunnen tonen
+        \item Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kan doorsturen
+         \item Ondersteuning voor visualisatie zoals grafieken
+    \end{itemize}
+    \item \textbf{Could have}
+    \begin{itemize}
+       \item Ondersteuning voor alerts
+    \end{itemize}
+\end{itemize}
+
+Het hele test proces zal gebruik maken van een lokale testomgeving en zal dus niet het formaat hebben van een cluster zoals bij Be-Mobile of andere bedrijven die tot de doelgroep van dit onderzoek behoren. Bijgevolg zullen de requirements `Moet een zo klein mogelijke impact hebben op de servers`, `Moet kunnen scalen naargelang de groeiende Kubernetes cluster`, en `Ondersteuning voor cluster omgevingen zoals Kubernetes` niet op deze manier onderzocht kunnen worden. Voor de conclusie van deze requirements zal er gerefereerd worden naar documentatie over de oplossingen in kwestie. Deze gegevens zullen dan vergeleken worden met elkaar. 
+
+Om het vergelijken van de oplossingen simpeler voor te stellen zal er voor elke requirement een cijfer van 1 tot 5 gegeven worden aan de oplossing in kwestie. Deze kunnen later vergeleken worden om een conclusie te vormen. Verder zal er een antwoord gegeven worden op de onderzoeksvraag. Zowel de conclusie als het antwoord op de onderzoeksvraag zijn te vinden in Hoofdstuk~\ref{ch:conclusie}
+
+
+
+
+
+
+
+
+
+
+
 
