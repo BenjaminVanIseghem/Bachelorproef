@@ -13,9 +13,37 @@
 
 Na de onderzoeksfase van dit werk in de vorm van een literatuurstudie (zie Hoofdstuk~\ref{ch:stand-van-zaken}) volgt hieronder een requirementsanalyse die een opsomming maakt van de belangrijkste requirements. Deze zullen later in de conclusie (zie Hoofdstuk~\ref{ch:conclusie}) belangrijk zijn in het beoordelen van de meest geschikte oplossing in deze situatie. Wegens het gebrek aan open-source oplossingen zal dit werk slechts 4 oplossingen vergelijken namelijk: ELK, EFK, Graylog, en Loki. Dit zorgt ervoor dat een long en short list niet nodig zijn in dit onderzoek en deze zullen dus achterwege gelaten worden. 
 
-De uitwerking van een testomgeving zal als volgt gebeuren. Wegens de manier waarop de mensen achter Kubernetes Minikube hebben opgebouwd, is het niet mogelijk om meerdere nodes te installeren op een eigen Minikube. Bijgevolg is het dus niet mogelijk om een testomgeving op te zetten waarbij gebruik gemaakt wordt van meerdere nodes. Dit zorgt ervoor dat de complexiteit van de Kubernetes testomgeving drastisch daalt en vervangen kan worden door een lokale testomgeving. Hierbij zullen 2 Go services elk in hun eigen Docker container draaiende gehouden worden terwijl elk van de logging oplossingen getest zullen worden. De services bestaan uit een oneindige loop die steeds enkele logs per second zal produceren. Deze logs worden daarna opgeslagen in een logfile. Deze logfile wordt vervolgens gelezen door de log collector en doorgestuurd naar een opslagplaats. Als laatste worden de logs opgehaald uit de databank door een frontend die deze visualiseert voor de gebruiker.
+De uitwerking van een testomgeving zal als volgt gebeuren. Wegens de manier waarop de mensen achter Kubernetes Minikube hebben opgebouwd, is het niet mogelijk om meerdere nodes te installeren op een eigen Minikube. Bijgevolg is het dus niet mogelijk om een testomgeving op te zetten waarbij gebruik gemaakt wordt van meerdere nodes. Dit zorgt ervoor dat de complexiteit van de Kubernetes testomgeving drastisch daalt en vervangen kan worden door een lokale testomgeving. Elke oplossing zal lokaal geïnstalleerd met een passende configuratie. Hierbij belangrijk is dat niet elke oplossing is opgebouwd vanuit hetzelfde model dus zullen er verschillen zijn in de implementatie. 
 
-\textbf{\underline{Go Services}}\\
+Promtail maakt gebruik van het pull model, hiervoor moeten logs opgeslagen worden in een file. Deze file wordt automatisch herkent door promtail en doorgestuurd naar Loki. Om deze logs te produceren zullen 2 Go services (zie Listings 3.3 en 3.4) elk in hun eigen Docker container draaien. De services bestaan uit een oneindige loop die steeds enkele logs per second zal produceren en opslaan in een file. 
+
+Fluentd maakt gebruik van het push model. Dit betekent dat logs naar Fluentd gepusht moeten worden. Fluentd stelt zich open als http endpoint of luistert naar een TCP socket om deze te forwarden. In de testomgeving zuller er dummy logs geproduceerd worden via een fluentd plugin. Deze worden doorgestuurd naar Elasticsearch en getoond in Kibana. De configuratie om dummy logs te produceren is te zien in Listing 3.1
+
+\begin{lstlisting}[caption=Fluentd dummy log generator]
+<source>
+    @type dummy
+    dummy {"hello":"world"}
+</source>
+\end{lstlisting}
+
+De Graylog stack maakt ook gebruik van Fluentd als log collector en forwarder. Een soortgelijke stack als de EFK stack zal hiervoor opgesteld worden met als verschil dat Graylog een eigen frontend voorziet. 
+
+De Elastic stack kan op een soortgelijke wijze opgesteld worden met een dummy data generator in Logstash. De logs worden doorgestuurd naar Elasticsearch en getoond in Kibana. In deze omgeving zal geen message broker opgesteld worden. De theorie hieromtrent wordt wel besproken.
+
+\begin{lstlisting}[caption=Logstash dummy log generator]
+input {
+    generator {
+        lines => [
+            "line 1",
+            "line 2",
+            "line 3"
+        ]
+        # Emit all lines 3 times.
+        count => 3
+    }
+}
+\end{lstlisting}
+
 \begin{lstlisting}[caption=Log generator main function]
 import (
     "errors"
@@ -76,7 +104,7 @@ Nadat deze testomgeving klaar is, zullen een voor een de gekozen logging oplossi
 
 Om de testen te herhalen op een Kubernetes cluster zijn extra configuraties nodig. In het kader van dit onderzoek is het interessant om deze te bespreken. De extra configuraties van elke oplossing zullen besproken worden in hun eigen respectievelijke hoofdstuk.
 
-\textbf{\underline{Kubernetes config file}}\\
+\subsubsection{Kubernetes config file}
 Een Kubernetes config file bestaat uit veel parameters waardoor een service op veel manieren gedeployed kan worden. Hieronder zijn de belangrijkste algemene parameters opgesomd. In elk hoofdstuk van de logging oplossingen zullen de gebruikte parameters dieper uitgelegd worden.
 \begin{itemize}
     \item apiVersion : Versie van de Kubernetes API dat gebruikt wordt
@@ -144,7 +172,7 @@ Bovenstaande requirements kunnen als volgt ingedeeld worden met de MoSCoW-techni
 
 Het hele test proces zal gebruik maken van een lokale testomgeving en zal dus niet het formaat hebben van een cluster zoals bij Be-Mobile of andere bedrijven die tot de doelgroep van dit onderzoek behoren. Bijgevolg zullen de requirements `Moet een zo klein mogelijke impact hebben op de servers`, `Moet kunnen scalen naargelang de groeiende Kubernetes cluster`, en `Ondersteuning voor cluster omgevingen zoals Kubernetes` niet op deze manier onderzocht kunnen worden. Voor de conclusie van deze requirements zal er gerefereerd worden naar documentatie over de oplossingen in kwestie. Deze gegevens zullen dan vergeleken worden met elkaar. 
 
-Om het vergelijken van de oplossingen simpeler voor te stellen zal er voor elke requirement een cijfer van 1 tot 5 gegeven worden aan de oplossing in kwestie. Deze kunnen later vergeleken worden om een conclusie te vormen. Verder zal er een antwoord gegeven worden op de onderzoeksvraag. Zowel de conclusie als het antwoord op de onderzoeksvraag zijn te vinden in Hoofdstuk~\ref{ch:conclusie}
+Om het vergelijken van de oplossingen simpeler voor te stellen zal er voor elke requirement een cijfer van 1 tot 5 gegeven worden aan de oplossing in kwestie. Elk cijfer wordt ook verwerkt met een multiplier aan de hand van de belangrijkheidsgraad van dit requirement. Deze kunnen later vergeleken worden om een conclusie te vormen. Verder zal er een antwoord gegeven worden op de onderzoeksvraag. Zowel de conclusie als het antwoord op de onderzoeksvraag zijn te vinden in Hoofdstuk~\ref{ch:conclusie}
 
 
 

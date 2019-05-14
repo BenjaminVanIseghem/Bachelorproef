@@ -5,24 +5,12 @@
 \chapter{Inleiding}
 \label{ch:inleiding}
 
-Alle logs op een centrale plaats hebben is een belangrijk aspect bij elke applicatie. Bij monolithische architecturen is dit vanzelfsprekend, maar dankzij de opkomst van de microservice architectuur is dit niet langer mogelijk zonder hulp van tools. Dit onderzoek bestudeert het verschil tussen een monolithische en een microservice architectuur. Daarna wordt ook op zoek gegaan naar het meest gepaste logging framework voor een microservice architectuur. In dit onderzoek komen enkel de open-source frameworks aanbod zodat deze volledig zelf kunnen gehost worden en er dus geen extra kosten aan te pas komen voor cloud services. 
-
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
-
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+Alle logs op een centrale plaats hebben is een belangrijk aspect bij elke applicatie. Bij monolithische architecturen is dit vanzelfsprekend, maar dankzij de opkomst van de microservice architectuur is dit niet langer mogelijk zonder hulp van tools. Dit onderzoek bestudeert het verschil tussen een monolithische en een microservice architectuur. Daarna wordt op zoek gegaan naar de meest gepaste logging oplossing voor een microservice architectuur. In dit onderzoek komen enkel de open-source oplossingen aanbod zodat deze volledig zelf kunnen gehost worden en er dus geen extra kosten aan te pas komen voor cloud services. 
 
 \section{Probleemstelling}
 \label{sec:probleemstelling}
 
-Go wordt steeds meer gebruikt en wordt door sommigen geprezen als een ideale taal voor microservices. Door de gedecentraliseerde structuur van microservices wordt het moeilijk om het overzicht te bewaren bij het debuggen van applicaties. Elke service heeft een eigen console met logs. Steeds opnieuw wisselen van console en scrollen naar een specifieke log is zeer inefficiënt. Waar naar op zoek moet gegaan worden is een gecentraliseerde logging oplossing die overzicht biedt aan al uw applicaties. De doelgroep voor dit onderzoek is bedrijven die in het proces zijn van overstappen van een monolithische naar een microservice architectuur of reeds overgestapt zijn en nog op zoek zijn naar een oplossing voor gecentralizeerde logging. In dit werk zullen meerdere oplossingen aangeboden worden met de pros en cons van elke oplossing.
+Go wordt steeds meer gebruikt en wordt door sommigen geprezen als een ideale taal voor microservices. Door de gedecentraliseerde structuur van microservices wordt het moeilijk om het overzicht te bewaren bij het debuggen van applicaties. Elke service heeft een eigen console met logs. Steeds opnieuw wisselen van console en scrollen naar een specifieke log is zeer inefficiënt. Waar naar op zoek moet gegaan worden is een gecentraliseerde logging oplossing die overzicht biedt aan al uw applicaties. De doelgroep voor dit onderzoek is bedrijven die in het proces zijn van overstappen van een monolithische naar een microservice architectuur of reeds overgestapt zijn en nog op zoek zijn naar een oplossing voor gecentralizeerde logging. In dit werk zullen meerdere oplossingen aangeboden worden en zal er aan de hand van een lijst requirements vergeleken welke het meest geschikt is om in productie uit te rollen.
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
@@ -34,7 +22,7 @@ Go wordt steeds meer gebruikt en wordt door sommigen geprezen als een ideale taa
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
 
-Het is de bedoeling van dit onderzoek om een vergelijking te maken tussen de ondersteunde logging platformen in Go. Er zal een afweging gemaakt worden voor de impact die de oplossing heeft op het systeem, de installatie, het gebruiksgemak, en in welke mate er support is van de community. Een algemene oplossing zal niet geboden worden in dit onderzoek. Wel zal er een opsomming gebeuren van de mogelijkheden met de pros en cons van elke oplossing.
+Het is de bedoeling van dit onderzoek om een vergelijking te maken tussen de ondersteunde logging platformen in Go. Er zal een afweging gemaakt worden voor de impact die de oplossing heeft op het systeem, de installatie, het gebruiksgemak, en in welke mate er support is van de community. Een algemene oplossing zal niet geboden worden in dit onderzoek. Wel zal er een opsomming gebeuren van de mogelijkheden en zal aan elke oplossing een score gegeven worden aan de hand van enkele requirements.
 
 \begin{itemize}
     \item Installatie 
@@ -45,10 +33,6 @@ Het is de bedoeling van dit onderzoek om een vergelijking te maken tussen de ond
 
 \section{Opzet van deze bachelorproef}
 \label{sec:opzet-bachelorproef}
-
-% Het is gebruikelijk aan het einde van de inleiding een overzicht te
-% geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
-% die je kan aanvullen/aanpassen in functie van je eigen tekst.
 
 De rest van deze bachelorproef is als volgt opgebouwd:
 

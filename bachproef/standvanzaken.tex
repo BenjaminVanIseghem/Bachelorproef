@@ -174,6 +174,7 @@ Wat is er belangrijk bij het zoeken naar een logging solution? Waar moet rekenin
 \end{enumerate}
 
 \subsection{ELK}
+\label{subsec:ELK}
 ELK is een acronym voor Elasticsearch, Logstash, Kibana. Dit zijn de drie componenten die een ELK stack bevat. Vaak wordt bovenop deze componenten ook gebruik gemaakt van Beats. Dit is een lichtgewicht data collector die handig kan zijn bij Kubernetes deployments met vele nodes. Bij complexe pipelines zoals Be-Mobile waar een hoge throughput aan data aanwezig is, wordt aangeraden om gebruik te maken van een message broker tussen de data collectie en data processing die voor een betrouwbare volgorde zorgt. Voorbeelden hiervan zijn Kafka, RabbitMQ, Redis (zie figuur 2.8) \autocite{berman2018-12}. 
 
 \begin{figure}[ht]
@@ -213,6 +214,8 @@ Om optimaal gebruik te maken van de EFK stack in een gedistribueerde omgeving op
 Graylog is ontstaan in 2009 in een tijd waar logging oplossingen, laat staan open source logging oplossingen quasi onbestaand waren. De marktleider in die tijd had een kostelijke licentie en daarom ontwikkelde de oprichter van Graylog een eigen open source oplossing. Dit wil zeggen dat Graylog vanaf het begin al een logging oplossing hoorde te zijn. Dit in tegenstelling tot ELK op basis van Elasticsearch, welke een full text search engine is. Graylog maakt zelf ook nog steeds gebruik van Elasticsearch als opslagplaats maar dankzij de Graylog server die voor de databank gepositioneerd is wordt het gebruik ervan geoptimaliseerd voor logs \autocite{graylog}.
 
 De ouderdom van de Graylog betekent dat deze niet is geoptimaliseerd voor het gebruik ervan in een gedistribueerde omgeving zoals een Kubernetes cluster. Er is wel reeds documentatie toegevoegd om Graylog werkende te krijgen op een Kubernetes cluster \autocite{lumiq2017}.  
+
+Graylog maakt voornamelijk gebruik van een eigen log format dat geoptimaliseerd is voor Elasticsearch, namelijk GELF. Dit staat voor Graylog Extender Log Format. GELF is ondersteund als output bij verschillende log forwarders \autocite{graylog}. 
 
 \subsection{Grafana Loki}
 De meest recente logging solution, nog steeds in alfa ontwikkeling maar wel reeds beschikbaar. Wat meteen duidelijk wordt, is dat Loki ontwikkeld is voor het gebruik in grote, complexe, gedistribueerde omgevingen. Het is ontwikkeld om zoveel mogelijk logs te kunnen opslaan voor zo weinig mogelijk geld. Tot hiertoe zijn alle databanken gebaseerd op volledige indexering bij het opslaan van logs, dit zorgt voor heel wat opslagruimte die noodzakelijk is om alles draaiende te houden. Loki stapt af van indexering en is gebaseerd op Prometheus, een ander product van Grafana dat gebruikt wordt voor de opslag van metrics. De manier waarop Loki logs opslaat, werkt op basis van labels en enkel de metadata wordt geïndexeerd \autocite{oleksii2019}.
