@@ -1,0 +1,1496 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{berman2018-06}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4db18eabed3553d93a2bbafa0ea5bede}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{fullhash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{bibnamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authorbibnamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authornamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authorfullhash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{month}{6}
+      \field{title}{Fluentd vs. Fluent Bit: Side by Side Comparison}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://logz.io/blog/fluentd-vs-fluent-bit/
+      \endverb
+      \verb{url}
+      \verb https://logz.io/blog/fluentd-vs-fluent-bit/
+      \endverb
+    \endentry
+    \entry{berman2018-12}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4db18eabed3553d93a2bbafa0ea5bede}{%
+           family={Berman},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{fullhash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{bibnamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authorbibnamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authornamehash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \strng{authorfullhash}{4db18eabed3553d93a2bbafa0ea5bede}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{12}
+      \field{title}{The Complete Guide to the ELK Stack}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://logz.io/learn/complete-guide-elk-stack/
+      \endverb
+      \verb{url}
+      \verb https://logz.io/learn/complete-guide-elk-stack/
+      \endverb
+    \endentry
+    \entry{Carey2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=5d0fe1af4e974f428ed82eb52617fe5d}{%
+           family={Carey},
+           familyi={C\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \strng{fullhash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \strng{bibnamehash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \strng{authorbibnamehash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \strng{authornamehash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \strng{authorfullhash}{5d0fe1af4e974f428ed82eb52617fe5d}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{month}{8}
+      \field{title}{What are microservices?}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.computerworlduk.com/applications/microservices-explained-is-this-just-tweaked-soa-or-something-much-bigger-3638372/
+      \endverb
+      \verb{url}
+      \verb https://www.computerworlduk.com/applications/microservices-explained-is-this-just-tweaked-soa-or-something-much-bigger-3638372/
+      \endverb
+    \endentry
+    \entry{Casey2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=70508088d0b7b3dbe8373e96980dad11}{%
+           family={Casey},
+           familyi={C\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{70508088d0b7b3dbe8373e96980dad11}
+      \strng{fullhash}{70508088d0b7b3dbe8373e96980dad11}
+      \strng{bibnamehash}{70508088d0b7b3dbe8373e96980dad11}
+      \strng{authorbibnamehash}{70508088d0b7b3dbe8373e96980dad11}
+      \strng{authornamehash}{70508088d0b7b3dbe8373e96980dad11}
+      \strng{authorfullhash}{70508088d0b7b3dbe8373e96980dad11}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{8}
+      \field{title}{How to explain microservices in plain English}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://enterprisersproject.com/article/2017/8/how-explain-microservices-plain-english
+      \endverb
+      \verb{url}
+      \verb https://enterprisersproject.com/article/2017/8/how-explain-microservices-plain-english
+      \endverb
+    \endentry
+    \entry{christner2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=1b00387ca01dfc98cc40022c625f491f}{%
+           family={Christner},
+           familyi={C\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b00387ca01dfc98cc40022c625f491f}
+      \strng{fullhash}{1b00387ca01dfc98cc40022c625f491f}
+      \strng{bibnamehash}{1b00387ca01dfc98cc40022c625f491f}
+      \strng{authorbibnamehash}{1b00387ca01dfc98cc40022c625f491f}
+      \strng{authornamehash}{1b00387ca01dfc98cc40022c625f491f}
+      \strng{authorfullhash}{1b00387ca01dfc98cc40022c625f491f}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to setup Prometheus Docker Monitoring}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.brianchristner.io/how-to-setup-prometheus-docker-monitoring/
+      \endverb
+      \verb{url}
+      \verb https://www.brianchristner.io/how-to-setup-prometheus-docker-monitoring/
+      \endverb
+    \endentry
+    \entry{consortium}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=282a39723740694826439b8b9830acbf}{%
+           family={Consortium},
+           familyi={C\bibinitperiod},
+           given={Agile\bibnamedelima Business},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{282a39723740694826439b8b9830acbf}
+      \strng{fullhash}{282a39723740694826439b8b9830acbf}
+      \strng{bibnamehash}{282a39723740694826439b8b9830acbf}
+      \strng{authorbibnamehash}{282a39723740694826439b8b9830acbf}
+      \strng{authornamehash}{282a39723740694826439b8b9830acbf}
+      \strng{authorfullhash}{282a39723740694826439b8b9830acbf}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MoSCoW Prioritisation}
+      \verb{urlraw}
+      \verb https://www.agilebusiness.org/content/moscow-prioritisation
+      \endverb
+      \verb{url}
+      \verb https://www.agilebusiness.org/content/moscow-prioritisation
+      \endverb
+    \endentry
+    \entry{czanik2013}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c7e8abd1e5f82ffac14abeafbf35c6ae}{%
+           family={Czanik},
+           familyi={C\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \strng{fullhash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \strng{bibnamehash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \strng{authorbibnamehash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \strng{authornamehash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \strng{authorfullhash}{c7e8abd1e5f82ffac14abeafbf35c6ae}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{4}
+      \field{title}{Why logging is important?}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.syslog-ng.com/community/b/blog/posts/why-logging-is-important
+      \endverb
+      \verb{url}
+      \verb https://www.syslog-ng.com/community/b/blog/posts/why-logging-is-important
+      \endverb
+    \endentry
+    \entry{githubLoki2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=04c3ef2350c5e8f441a51190650d8b76}{%
+           family={davkal},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{04c3ef2350c5e8f441a51190650d8b76}
+      \strng{fullhash}{04c3ef2350c5e8f441a51190650d8b76}
+      \strng{bibnamehash}{04c3ef2350c5e8f441a51190650d8b76}
+      \strng{authorbibnamehash}{04c3ef2350c5e8f441a51190650d8b76}
+      \strng{authornamehash}{04c3ef2350c5e8f441a51190650d8b76}
+      \strng{authorfullhash}{04c3ef2350c5e8f441a51190650d8b76}
+      \field{sortinit}{d}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Using Grafana to Query your logs}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/grafana/loki/blob/master/docs/usage.md
+      \endverb
+      \verb{url}
+      \verb https://github.com/grafana/loki/blob/master/docs/usage.md
+      \endverb
+    \endentry
+    \entry{jens2019}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8eff016eec62f3d9602e5a32c051cd80}{%
+           family={De\bibnamedelima Valck},
+           familyi={D\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8eff016eec62f3d9602e5a32c051cd80}
+      \strng{fullhash}{8eff016eec62f3d9602e5a32c051cd80}
+      \strng{bibnamehash}{8eff016eec62f3d9602e5a32c051cd80}
+      \strng{authorbibnamehash}{8eff016eec62f3d9602e5a32c051cd80}
+      \strng{authornamehash}{8eff016eec62f3d9602e5a32c051cd80}
+      \strng{authorfullhash}{8eff016eec62f3d9602e5a32c051cd80}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{day}{18}
+      \field{howpublished}{private communication}
+      \field{month}{2}
+      \field{year}{2019}
+      \field{dateera}{ce}
+    \endentry
+    \entry{Dietrich2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cfc6fddd8435f26e3df6ec413e3d755d}{%
+           family={Dietrich},
+           familyi={D\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \strng{fullhash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \strng{bibnamehash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \strng{authorbibnamehash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \strng{authornamehash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \strng{authorfullhash}{cfc6fddd8435f26e3df6ec413e3d755d}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{6}
+      \field{title}{Getting started quickly with go logging}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.scalyr.com/blog/go-logging/
+      \endverb
+      \verb{url}
+      \verb https://www.scalyr.com/blog/go-logging/
+      \endverb
+    \endentry
+    \entry{elastic}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a078ed5ade8df4aac54efbdb57e63ad2}{%
+           family={Elastic},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{fullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{bibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorbibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authornamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorfullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Running the Elastic Stack on Kubernetes}
+      \verb{urlraw}
+      \verb https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-kubernetes.html
+      \endverb
+      \verb{url}
+      \verb https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-kubernetes.html
+      \endverb
+    \endentry
+    \entry{elasticheap}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a078ed5ade8df4aac54efbdb57e63ad2}{%
+           family={Elastic},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{fullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{bibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorbibnamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authornamehash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \strng{authorfullhash}{a078ed5ade8df4aac54efbdb57e63ad2}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Setting the heap size}
+      \verb{urlraw}
+      \verb https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html
+      \endverb
+      \verb{url}
+      \verb https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html
+      \endverb
+    \endentry
+    \entry{ellingwood2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9f3f1976a08544bc78d8fcf83046e5db}{%
+           family={Ellingwood},
+           familyi={E\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{fullhash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{bibnamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authorbibnamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authornamehash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \strng{authorfullhash}{9f3f1976a08544bc78d8fcf83046e5db}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{5}
+      \field{title}{An Introduction to Kubernetes}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
+      \endverb
+      \verb{url}
+      \verb https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
+      \endverb
+    \endentry
+    \entry{sirupsen2014}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=1d3c2ae58e36d078407a8d322ac8ada4}{%
+           family={Eskildsen},
+           familyi={E\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \strng{fullhash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \strng{bibnamehash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \strng{authorbibnamehash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \strng{authornamehash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \strng{authorfullhash}{1d3c2ae58e36d078407a8d322ac8ada4}
+      \field{sortinit}{E}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{2}
+      \field{title}{Logrus}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/sirupsen/logrus
+      \endverb
+      \verb{url}
+      \verb https://github.com/sirupsen/logrus
+      \endverb
+    \endentry
+    \entry{SourceFuse2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=6cb432a82b97728d9301241b2d7fd3af}{%
+           family={Fuse},
+           familyi={F\bibinitperiod},
+           given={Source},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6cb432a82b97728d9301241b2d7fd3af}
+      \strng{fullhash}{6cb432a82b97728d9301241b2d7fd3af}
+      \strng{bibnamehash}{6cb432a82b97728d9301241b2d7fd3af}
+      \strng{authorbibnamehash}{6cb432a82b97728d9301241b2d7fd3af}
+      \strng{authornamehash}{6cb432a82b97728d9301241b2d7fd3af}
+      \strng{authorfullhash}{6cb432a82b97728d9301241b2d7fd3af}
+      \field{sortinit}{F}
+      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{7}
+      \field{title}{Microservices, Explained.}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@SourceFuse/microservices-explained-b3b052b6f05d
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@SourceFuse/microservices-explained-b3b052b6f05d
+      \endverb
+    \endentry
+    \entry{Garcin}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4985aba87d5be1f92fd832cfac95a741}{%
+           family={Garcin},
+           familyi={G\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{fullhash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{bibnamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authorbibnamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authornamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authorfullhash}{4985aba87d5be1f92fd832cfac95a741}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Surveying The Go Database Landscape}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.activestate.com/blog/surveying-go-database-landscape/
+      \endverb
+      \verb{url}
+      \verb https://www.activestate.com/blog/surveying-go-database-landscape/
+      \endverb
+    \endentry
+    \entry{gifford2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eebffeabab87b921bd8ab3a39e240d5b}{%
+           family={Gifford},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{fullhash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{bibnamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authorbibnamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authornamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authorfullhash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{2}
+      \field{title}{Data is King: Measuring the Impact of Logging on Your Application}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.loggly.com/blog/measuring-the-impact-of-logging-on-your-application/
+      \endverb
+      \verb{url}
+      \verb https://www.loggly.com/blog/measuring-the-impact-of-logging-on-your-application/
+      \endverb
+    \endentry
+    \entry{gifford2016}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eebffeabab87b921bd8ab3a39e240d5b}{%
+           family={Gifford},
+           familyi={G\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{fullhash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{bibnamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authorbibnamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authornamehash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \strng{authorfullhash}{eebffeabab87b921bd8ab3a39e240d5b}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{5}
+      \field{title}{Logging: To ELK or not to ELK? That is the question}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.loggly.com/blog/to-elk-or-not-to-elk-that-is-the-question/
+      \endverb
+      \verb{url}
+      \verb https://www.loggly.com/blog/to-elk-or-not-to-elk-that-is-the-question/
+      \endverb
+    \endentry
+    \entry{Golang2012}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eda14e187a768b38eda999457c9cca1e}{%
+           family={Golang},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{fullhash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{bibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorbibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authornamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorfullhash}{eda14e187a768b38eda999457c9cca1e}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Golang Documentation}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://golang.org
+      \endverb
+      \verb{url}
+      \verb https://golang.org
+      \endverb
+    \endentry
+    \entry{Golang}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eda14e187a768b38eda999457c9cca1e}{%
+           family={Golang},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{fullhash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{bibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorbibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authornamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorfullhash}{eda14e187a768b38eda999457c9cca1e}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Go Blog}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://blog.golang.org
+      \endverb
+      \verb{url}
+      \verb https://blog.golang.org
+      \endverb
+    \endentry
+    \entry{loki}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=13d976ec915aee59afabcef6291764b8}{%
+           family={Grafana},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{13d976ec915aee59afabcef6291764b8}
+      \strng{fullhash}{13d976ec915aee59afabcef6291764b8}
+      \strng{bibnamehash}{13d976ec915aee59afabcef6291764b8}
+      \strng{authorbibnamehash}{13d976ec915aee59afabcef6291764b8}
+      \strng{authornamehash}{13d976ec915aee59afabcef6291764b8}
+      \strng{authorfullhash}{13d976ec915aee59afabcef6291764b8}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \verb{urlraw}
+      \verb https://grafana.com/loki
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/loki
+      \endverb
+    \endentry
+    \entry{grav}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0bf7995e2c9cb31470bcf8d48e2ca5d3}{%
+           family={Grav},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \strng{fullhash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \strng{bibnamehash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \strng{authorbibnamehash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \strng{authornamehash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \strng{authorfullhash}{0bf7995e2c9cb31470bcf8d48e2ca5d3}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{YAML Syntax}
+      \verb{urlraw}
+      \verb https://learn.getgrav.org/15/advanced/yaml
+      \endverb
+      \verb{url}
+      \verb https://learn.getgrav.org/15/advanced/yaml
+      \endverb
+    \endentry
+    \entry{graylogdocs}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3fff9299e991c2e4cfaacafeee07fe8f}{%
+           family={Graylog},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{fullhash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{bibnamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authorbibnamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authornamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authorfullhash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Graylog Documentation}
+      \verb{urlraw}
+      \verb https://docs.graylog.org/en/3.0/
+      \endverb
+      \verb{url}
+      \verb https://docs.graylog.org/en/3.0/
+      \endverb
+    \endentry
+    \entry{graylog}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=3fff9299e991c2e4cfaacafeee07fe8f}{%
+           family={Graylog},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{fullhash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{bibnamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authorbibnamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authornamehash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \strng{authorfullhash}{3fff9299e991c2e4cfaacafeee07fe8f}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The thinking behind the Graylog architecture and why it matters to you}
+      \verb{urlraw}
+      \verb http://docs.graylog.org/en/3.0/pages/ideas_explained.html
+      \endverb
+      \verb{url}
+      \verb http://docs.graylog.org/en/3.0/pages/ideas_explained.html
+      \endverb
+    \endentry
+    \entry{harikumar2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=cafd7b07faa2227bd04c1d690e8dad8c}{%
+           family={Harikumar},
+           familyi={H\bibinitperiod},
+           given={Sandeep},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \strng{fullhash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \strng{bibnamehash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \strng{authorbibnamehash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \strng{authornamehash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \strng{authorfullhash}{cafd7b07faa2227bd04c1d690e8dad8c}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{4}
+      \field{title}{The LOG Battle: Logstash and Fluentd}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/tensult/the-log-battle-logstash-and-fluentd-c65f2f7c24b4
+      \endverb
+      \verb{url}
+      \verb https://medium.com/tensult/the-log-battle-logstash-and-fluentd-c65f2f7c24b4
+      \endverb
+    \endentry
+    \entry{ITMarketplace2016}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=26f408f3e23e98fb61c568255e2945aa}{%
+           family={IT\bibnamedelima Marketplace},
+           familyi={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={it},
+           giveni={i\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26f408f3e23e98fb61c568255e2945aa}
+      \strng{fullhash}{26f408f3e23e98fb61c568255e2945aa}
+      \strng{bibnamehash}{26f408f3e23e98fb61c568255e2945aa}
+      \strng{authorbibnamehash}{26f408f3e23e98fb61c568255e2945aa}
+      \strng{authornamehash}{26f408f3e23e98fb61c568255e2945aa}
+      \strng{authorfullhash}{26f408f3e23e98fb61c568255e2945aa}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{6}
+      \field{title}{Why Use Go for Microservices}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@itmarketplace.net/why-use-go-for-microservices-831ee754bf20
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@itmarketplace.net/why-use-go-for-microservices-831ee754bf20
+      \endverb
+    \endentry
+    \entry{jetha2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=b001eeaa4452768a9d6e74d87a9f6c9f}{%
+           family={Jetha},
+           familyi={J\bibinitperiod},
+           given={Hanif},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \strng{fullhash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \strng{bibnamehash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \strng{authorbibnamehash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \strng{authornamehash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \strng{authorfullhash}{b001eeaa4452768a9d6e74d87a9f6c9f}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{26}
+      \field{month}{11}
+      \field{title}{How To Set Up an Elasticsearch, Fluentd and Kibana (EFK) Logging Stack on Kubernetes}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.digitalocean.com/community/tutorials/how-to-set-up-an-elasticsearch-fluentd-and-kibana-efk-logging-stack-on-kubernetes
+      \endverb
+      \verb{url}
+      \verb https://www.digitalocean.com/community/tutorials/how-to-set-up-an-elasticsearch-fluentd-and-kibana-efk-logging-stack-on-kubernetes
+      \endverb
+    \endentry
+    \entry{learnitguide2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=021b4bd55bbdca9fce5c16050e624385}{%
+           family={LearnItGuide},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{021b4bd55bbdca9fce5c16050e624385}
+      \strng{fullhash}{021b4bd55bbdca9fce5c16050e624385}
+      \strng{bibnamehash}{021b4bd55bbdca9fce5c16050e624385}
+      \strng{authorbibnamehash}{021b4bd55bbdca9fce5c16050e624385}
+      \strng{authornamehash}{021b4bd55bbdca9fce5c16050e624385}
+      \strng{authorfullhash}{021b4bd55bbdca9fce5c16050e624385}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{11}
+      \field{title}{What is Kubernetes - Learn Kubernetes from Basics}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.learnitguide.net/2018/08/what-is-kubernetes-learn-kubernetes.html
+      \endverb
+      \verb{url}
+      \verb https://www.learnitguide.net/2018/08/what-is-kubernetes-learn-kubernetes.html
+      \endverb
+    \endentry
+    \entry{levy2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8ba6ff61f05564ac632fa868f84e6863}{%
+           family={Levy},
+           familyi={L\bibinitperiod},
+           given={Tomer},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ba6ff61f05564ac632fa868f84e6863}
+      \strng{fullhash}{8ba6ff61f05564ac632fa868f84e6863}
+      \strng{bibnamehash}{8ba6ff61f05564ac632fa868f84e6863}
+      \strng{authorbibnamehash}{8ba6ff61f05564ac632fa868f84e6863}
+      \strng{authornamehash}{8ba6ff61f05564ac632fa868f84e6863}
+      \strng{authorfullhash}{8ba6ff61f05564ac632fa868f84e6863}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{5}
+      \field{title}{How to Deploy the ELK Stack in Production}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://logz.io/blog/deploy-elk-production/
+      \endverb
+      \verb{url}
+      \verb https://logz.io/blog/deploy-elk-production/
+      \endverb
+    \endentry
+    \entry{logdna2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2284e2b7381fbebd619cb6ba5cd4179e}{%
+           family={LogDNA},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \strng{fullhash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \strng{bibnamehash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \strng{authorbibnamehash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \strng{authornamehash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \strng{authorfullhash}{2284e2b7381fbebd619cb6ba5cd4179e}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is Log Management? The Complete Logging Guide}
+      \verb{urlraw}
+      \verb https://logdna.com/what-is-log-management/
+      \endverb
+      \verb{url}
+      \verb https://logdna.com/what-is-log-management/
+      \endverb
+    \endentry
+    \entry{lumiq2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c2b318c33c220d5bb46532f20f2f3631}{%
+           family={LUMIQ.AI},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2b318c33c220d5bb46532f20f2f3631}
+      \strng{fullhash}{c2b318c33c220d5bb46532f20f2f3631}
+      \strng{bibnamehash}{c2b318c33c220d5bb46532f20f2f3631}
+      \strng{authorbibnamehash}{c2b318c33c220d5bb46532f20f2f3631}
+      \strng{authornamehash}{c2b318c33c220d5bb46532f20f2f3631}
+      \strng{authorfullhash}{c2b318c33c220d5bb46532f20f2f3631}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{month}{2}
+      \field{title}{Running Graylog on Kubernetes}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/lumiq-tech/running-graylog-on-kubernetes-63022fc35da2
+      \endverb
+      \verb{url}
+      \verb https://medium.com/lumiq-tech/running-graylog-on-kubernetes-63022fc35da2
+      \endverb
+    \endentry
+    \entry{nastel}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2071efe6163f9b81a26f444a1b74ef6b}{%
+           family={Nastel},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \strng{fullhash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \strng{bibnamehash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \strng{authorbibnamehash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \strng{authornamehash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \strng{authorfullhash}{2071efe6163f9b81a26f444a1b74ef6b}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Log Analytics, Log Mining \& Anomaly Detection}
+      \verb{urlraw}
+      \verb https://www.nastel.com/blog/understanding-log-analytics-log-mining-anomaly-detection-2/
+      \endverb
+      \verb{url}
+      \verb https://www.nastel.com/blog/understanding-log-analytics-log-mining-anomaly-detection-2/
+      \endverb
+    \endentry
+    \entry{oleksii2019}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=30d53b9d60e7f75569958fccb650db13}{%
+           family={oleksii},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{30d53b9d60e7f75569958fccb650db13}
+      \strng{fullhash}{30d53b9d60e7f75569958fccb650db13}
+      \strng{bibnamehash}{30d53b9d60e7f75569958fccb650db13}
+      \strng{authorbibnamehash}{30d53b9d60e7f75569958fccb650db13}
+      \strng{authornamehash}{30d53b9d60e7f75569958fccb650db13}
+      \strng{authorfullhash}{30d53b9d60e7f75569958fccb650db13}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{11}
+      \field{month}{3}
+      \field{title}{Collect and View Logs with Grafana Loki}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/pharos-production/collect-and-view-logs-with-grafana-loki-33d9155ac581
+      \endverb
+      \verb{url}
+      \verb https://medium.com/pharos-production/collect-and-view-logs-with-grafana-loki-33d9155ac581
+      \endverb
+    \endentry
+    \entry{peri2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9f5f202366ae7afd112eb050ab487769}{%
+           family={Peri},
+           familyi={P\bibinitperiod},
+           given={Noni},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f5f202366ae7afd112eb050ab487769}
+      \strng{fullhash}{9f5f202366ae7afd112eb050ab487769}
+      \strng{bibnamehash}{9f5f202366ae7afd112eb050ab487769}
+      \strng{authorbibnamehash}{9f5f202366ae7afd112eb050ab487769}
+      \strng{authornamehash}{9f5f202366ae7afd112eb050ab487769}
+      \strng{authorfullhash}{9f5f202366ae7afd112eb050ab487769}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{11}
+      \field{title}{Fluentd vs. Logstash: A Comparison of Log Collectors}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://logz.io/blog/fluentd-logstash/
+      \endverb
+      \verb{url}
+      \verb https://logz.io/blog/fluentd-logstash/
+      \endverb
+    \endentry
+    \entry{petrausch}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f4048dc84855eee45fa5bdce51be05d2}{%
+           family={Petrausch},
+           familyi={P\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f4048dc84855eee45fa5bdce51be05d2}
+      \strng{fullhash}{f4048dc84855eee45fa5bdce51be05d2}
+      \strng{bibnamehash}{f4048dc84855eee45fa5bdce51be05d2}
+      \strng{authorbibnamehash}{f4048dc84855eee45fa5bdce51be05d2}
+      \strng{authornamehash}{f4048dc84855eee45fa5bdce51be05d2}
+      \strng{authorfullhash}{f4048dc84855eee45fa5bdce51be05d2}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{1}
+      \field{title}{Kubernetes Logging with Fluentd and the Elastic Stack}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.inovex.de/blog/kubernetes-logging-with-fluentd-and-the-elastic-stack/
+      \endverb
+      \verb{url}
+      \verb https://www.inovex.de/blog/kubernetes-logging-with-fluentd-and-the-elastic-stack/
+      \endverb
+    \endentry
+    \entry{reichert2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=1996991105b3316a7b68b5614c52f049}{%
+           family={Reichert},
+           familyi={R\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1996991105b3316a7b68b5614c52f049}
+      \strng{fullhash}{1996991105b3316a7b68b5614c52f049}
+      \strng{bibnamehash}{1996991105b3316a7b68b5614c52f049}
+      \strng{authorbibnamehash}{1996991105b3316a7b68b5614c52f049}
+      \strng{authornamehash}{1996991105b3316a7b68b5614c52f049}
+      \strng{authorfullhash}{1996991105b3316a7b68b5614c52f049}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{1}
+      \field{title}{Logs and Metrics: What are they, and how do they help me?}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sumologic.com/blog/logs-metrics-overview/
+      \endverb
+      \verb{url}
+      \verb https://www.sumologic.com/blog/logs-metrics-overview/
+      \endverb
+    \endentry
+    \entry{Rouse}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=1,uniquepart=given,hash=a55990bd020c2bf46a0686c27cb75590}{%
+           family={Rouse},
+           familyi={R\bibinitperiod},
+           given={Jef},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{fullhash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{bibnamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authorbibnamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authornamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authorfullhash}{a55990bd020c2bf46a0686c27cb75590}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Why Go us skyrocketing in popularity}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://opensource.com/article/17/11/why-go-grows
+      \endverb
+      \verb{url}
+      \verb https://opensource.com/article/17/11/why-go-grows
+      \endverb
+    \endentry
+    \entry{Rouse2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=1,uniquepart=given,hash=d6ebb0634de22e70618460d3fc936297}{%
+           family={Rouse},
+           familyi={R\bibinitperiod},
+           given={Margaret},
+           giveni={M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{d6ebb0634de22e70618460d3fc936297}
+      \strng{fullhash}{d6ebb0634de22e70618460d3fc936297}
+      \strng{bibnamehash}{d6ebb0634de22e70618460d3fc936297}
+      \strng{authorbibnamehash}{d6ebb0634de22e70618460d3fc936297}
+      \strng{authornamehash}{d6ebb0634de22e70618460d3fc936297}
+      \strng{authorfullhash}{d6ebb0634de22e70618460d3fc936297}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{4}
+      \field{title}{Distributed tracing}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://searchitoperations.techtarget.com/definition/distributed-tracing
+      \endverb
+      \verb{url}
+      \verb https://searchitoperations.techtarget.com/definition/distributed-tracing
+      \endverb
+    \endentry
+    \entry{Sabic2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=36406f43828931586268b454d426221d}{%
+           family={Sabic},
+           familyi={S\bibinitperiod},
+           given={Nedim},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{36406f43828931586268b454d426221d}
+      \strng{fullhash}{36406f43828931586268b454d426221d}
+      \strng{bibnamehash}{36406f43828931586268b454d426221d}
+      \strng{authorbibnamehash}{36406f43828931586268b454d426221d}
+      \strng{authornamehash}{36406f43828931586268b454d426221d}
+      \strng{authorfullhash}{36406f43828931586268b454d426221d}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{5}
+      \field{title}{Jaeger vs Zipkin – OpenTracing Distributed Tracers}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://sematext.com/blog/jaeger-vs-zipkin-opentracing-distributed-tracers/
+      \endverb
+      \verb{url}
+      \verb https://sematext.com/blog/jaeger-vs-zipkin-opentracing-distributed-tracers/
+      \endverb
+    \endentry
+    \entry{techstories2017}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=bb501ae12566ff485e3db5510e4ec96b}{%
+           family={Stories},
+           familyi={S\bibinitperiod},
+           given={Short\bibnamedelima Tech},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bb501ae12566ff485e3db5510e4ec96b}
+      \strng{fullhash}{bb501ae12566ff485e3db5510e4ec96b}
+      \strng{bibnamehash}{bb501ae12566ff485e3db5510e4ec96b}
+      \strng{authorbibnamehash}{bb501ae12566ff485e3db5510e4ec96b}
+      \strng{authornamehash}{bb501ae12566ff485e3db5510e4ec96b}
+      \strng{authorfullhash}{bb501ae12566ff485e3db5510e4ec96b}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{6}
+      \field{title}{Kubernetes 101 DaemonSets}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://hackernoon.com/kubernetes-101-daemonsets-5-c5bbfcbb1579
+      \endverb
+      \verb{url}
+      \verb https://hackernoon.com/kubernetes-101-daemonsets-5-c5bbfcbb1579
+      \endverb
+    \endentry
+    \entry{swidler2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=178ad4d73cde664f3a0fc0671e2c4d1d}{%
+           family={Swidler},
+           familyi={S\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \strng{fullhash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \strng{bibnamehash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \strng{authorbibnamehash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \strng{authornamehash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \strng{authorfullhash}{178ad4d73cde664f3a0fc0671e2c4d1d}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{8}
+      \field{title}{High Performance ELK with Kubernetes: Part 1}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://engineering.udacity.com/high-performance-elk-with-kubernetes-part-1-1d09f41a4ce2
+      \endverb
+      \verb{url}
+      \verb https://engineering.udacity.com/high-performance-elk-with-kubernetes-part-1-1d09f41a4ce2
+      \endverb
+    \endentry
+    \entry{Glog2013}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=57cdcc1293897ee0ea78e45019a7d66e}{%
+           family={Symonds},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \strng{fullhash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \strng{bibnamehash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \strng{authorbibnamehash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \strng{authornamehash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \strng{authorfullhash}{57cdcc1293897ee0ea78e45019a7d66e}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{2}
+      \field{title}{Glog}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/golang/glog
+      \endverb
+      \verb{url}
+      \verb https://github.com/golang/glog
+      \endverb
+    \endentry
+    \entry{Techopedia}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2b28e01a4c00d16689a1621b7f66901e}{%
+           family={Technopedia},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b28e01a4c00d16689a1621b7f66901e}
+      \strng{fullhash}{2b28e01a4c00d16689a1621b7f66901e}
+      \strng{bibnamehash}{2b28e01a4c00d16689a1621b7f66901e}
+      \strng{authorbibnamehash}{2b28e01a4c00d16689a1621b7f66901e}
+      \strng{authornamehash}{2b28e01a4c00d16689a1621b7f66901e}
+      \strng{authorfullhash}{2b28e01a4c00d16689a1621b7f66901e}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Log Files}
+      \verb{urlraw}
+      \verb https://www.techopedia.com/definition/5445/log-file
+      \endverb
+      \verb{url}
+      \verb https://www.techopedia.com/definition/5445/log-file
+      \endverb
+    \endentry
+    \entry{vaughan2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c1c62efff70a27aafa9688a1a2c13e35}{%
+           family={Vaughan-Nichols},
+           familyi={V\bibinithyphendelim N\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \strng{fullhash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \strng{bibnamehash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \strng{authorbibnamehash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \strng{authornamehash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \strng{authorfullhash}{c1c62efff70a27aafa9688a1a2c13e35}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{5}
+      \field{title}{What is Docker and why is it so darn popular?}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/
+      \endverb
+      \verb{url}
+      \verb https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/
+      \endverb
+    \endentry
+    \entry{veeramachaneni2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a2ade216dd0df5d8345f99b052978dc5}{%
+           family={Veeramachaneni},
+           familyi={V\bibinitperiod},
+           given={Goutham},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a2ade216dd0df5d8345f99b052978dc5}
+      \strng{fullhash}{a2ade216dd0df5d8345f99b052978dc5}
+      \strng{bibnamehash}{a2ade216dd0df5d8345f99b052978dc5}
+      \strng{authorbibnamehash}{a2ade216dd0df5d8345f99b052978dc5}
+      \strng{authornamehash}{a2ade216dd0df5d8345f99b052978dc5}
+      \strng{authorfullhash}{a2ade216dd0df5d8345f99b052978dc5}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{12}
+      \field{title}{Loki: Prometheus-inspired, open source logging for cloud natives}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://grafana.com/blog/2018/12/12/loki-prometheus-inspired-open-source-logging-for-cloud-natives/
+      \endverb
+      \verb{url}
+      \verb https://grafana.com/blog/2018/12/12/loki-prometheus-inspired-open-source-logging-for-cloud-natives/
+      \endverb
+    \endentry
+    \entry{harlow2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=6673a44a27043553011f5f4d34293618}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Harlow},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6673a44a27043553011f5f4d34293618}
+      \strng{fullhash}{6673a44a27043553011f5f4d34293618}
+      \strng{bibnamehash}{6673a44a27043553011f5f4d34293618}
+      \strng{authorbibnamehash}{6673a44a27043553011f5f4d34293618}
+      \strng{authornamehash}{6673a44a27043553011f5f4d34293618}
+      \strng{authorfullhash}{6673a44a27043553011f5f4d34293618}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{11}
+      \field{title}{go-micro-services}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/harlow/go-micro-services
+      \endverb
+      \verb{url}
+      \verb https://github.com/harlow/go-micro-services
+      \endverb
+    \endentry
+    \entry{yegulalp2018}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=73ea377a49be1fd2baadc3565f5029c6}{%
+           family={Yegulalp},
+           familyi={Y\bibinitperiod},
+           given={Serdar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{73ea377a49be1fd2baadc3565f5029c6}
+      \strng{fullhash}{73ea377a49be1fd2baadc3565f5029c6}
+      \strng{bibnamehash}{73ea377a49be1fd2baadc3565f5029c6}
+      \strng{authorbibnamehash}{73ea377a49be1fd2baadc3565f5029c6}
+      \strng{authornamehash}{73ea377a49be1fd2baadc3565f5029c6}
+      \strng{authorfullhash}{73ea377a49be1fd2baadc3565f5029c6}
+      \field{sortinit}{Y}
+      \field{sortinithash}{b8d711a035f7be9840c721c82920477e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{9}
+      \field{title}{What is Docker? Docker containers explained}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.infoworld.com/article/3204171/what-is-docker-docker-containers-explained.html
+      \endverb
+      \verb{url}
+      \verb https://www.infoworld.com/article/3204171/what-is-docker-docker-containers-explained.html
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{Pollefliet2011}
+\endrefsection
+\endinput
+

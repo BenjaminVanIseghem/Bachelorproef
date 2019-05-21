@@ -1,0 +1,249 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {dutch}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Inleiding}{17}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Probleemstelling}{17}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Onderzoeksvraag}{18}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Onderzoeksdoelstelling}{18}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Opzet van deze bachelorproef}{18}{section.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Stand van zaken}{21}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Be-Mobile}{21}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Golang}{22}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Microservices}{22}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Kubernetes}{23}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Wat is Kubernetes?}{23}{subsection.2.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.2}Architectuur}{23}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Docker}{25}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Situatie voor Docker}{25}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}De oplossing}{25}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Logs, traces, en metrics}{26}{section.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.1}Wat is een log?}{26}{subsection.2.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.2}Belang van logging}{26}{subsection.2.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.3}Golang logging frameworks}{27}{subsection.2.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.4}Logrus}{27}{subsection.2.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.5}Tracing}{28}{subsection.2.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.6.6}Metrics}{28}{subsection.2.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.7}Logging solutions}{29}{section.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.1}Wat is een logging solution en hoe werkt het?}{29}{subsection.2.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.2}Belangrijke punten in een logging solution}{30}{subsection.2.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.3}ELK}{30}{subsection.2.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.4}EFK}{31}{subsection.2.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.5}Graylog}{32}{subsection.2.7.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.7.6}Grafana Loki}{33}{subsection.2.7.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Methodologie}{35}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kubernetes config file}{37}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Requirementsanalyse}{38}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}ELK}{41}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Installatie en configuratie}{41}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Lokale omgeving}{41}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}Kubernetes omgeving}{43}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Requirements}{43}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Must have}{43}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet open source zijn}{43}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor cluster omgevingen zoals Kubernetes}{43}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet een zo klein mogelijke impact hebben op de servers}{43}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet kunnen scalen naargelang de groeiende Kubernetes cluster}{44}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Should have}{44}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te configureren zijn}{44}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te gebruiken zijn}{44}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet goed gedocumenteerd zijn}{44}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet de logs overzichtelijk kunnen tonen}{45}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kunnen doorsturen}{45}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor visualisatie zoals grafieken}{45}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Could have}{45}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor alerts}{45}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Resultaten}{45}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}EFK}{47}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Installatie en configuratie}{47}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Lokale omgeving}{47}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Kubernetes omgeving}{49}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Requirements}{50}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Must have}{50}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet open source zijn}{50}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor cluster omgevingen zoals Kubernetes}{50}{section*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet een zo klein mogelijke impact hebben op de servers}{50}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet kunnen scalen naargelang de groeiende Kubernetes cluster}{50}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Should have}{51}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te configureren zijn}{51}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te gebruiken zijn}{51}{section*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet goed gedocumenteerd zijn}{51}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet de logs overzichtelijk kunnen tonen}{51}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kunnen doorsturen}{51}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor visualisatie zoals grafieken}{52}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.3}Could have}{52}{subsection.5.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor alerts}{52}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Resultaten}{52}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Graylog}{55}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Installatie en configuratie}{55}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Lokale omgeving}{55}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Kubernetes omgeving}{57}{subsection.6.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Requirements}{57}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Must have}{57}{subsection.6.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet open source zijn}{57}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor cluster omgevingen zoals Kubernetes}{58}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet een zo klein mogelijke impact hebben op de servers}{58}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet kunnen scalen naargelang de groeiende Kubernetes cluster}{58}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}Should have}{59}{subsection.6.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te configureren zijn}{59}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te gebruiken zijn}{59}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet goed gedocumenteerd zijn}{60}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet de logs overzichtelijk kunnen tonen}{60}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kunnen doorsturen}{60}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor visualisatie zoals grafieken}{61}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Could have}{61}{subsection.6.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor alerts}{61}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Resultaten}{61}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Loki}{63}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Installatie en configuratie}{63}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}Lokale omgeving}{63}{subsection.7.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Promtail}{63}{section*.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Loki}{64}{section*.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Grafana}{66}{section*.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}Kubernetes omgeving}{66}{subsection.7.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Requirements}{67}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.1}Must have}{67}{subsection.7.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet open source zijn}{67}{section*.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor cluster omgevingen zoals Kubernetes}{67}{section*.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet een zo klein mogelijke impact hebben op de servers}{67}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet kunnen scalen naargelang de groeiende Kubernetes cluster}{68}{section*.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.2}Should have}{68}{subsection.7.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te configureren zijn}{68}{section*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet (relatief) eenvoudig te gebruiken zijn}{68}{section*.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet goed gedocumenteerd zijn}{68}{section*.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Moet de logs overzichtelijk kunnen tonen}{68}{section*.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor verschillende plugins die data extra kunnen verwerken of naar meerdere locaties kunnen doorsturen}{69}{section*.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor visualisatie zoals grafieken}{69}{section*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.2.3}Could have}{69}{subsection.7.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Ondersteuning voor alerts}{69}{section*.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Resultaten}{69}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Conclusie}{71}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{73}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{73}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}State-of-the-art}{74}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{74}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{74}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{74}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{75}{appendix*.55}
+\contentsfinish 

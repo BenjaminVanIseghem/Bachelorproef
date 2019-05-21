@@ -1,0 +1,21 @@
+% Encoding: windows-1252
+
+@Article{Rouse,
+  author = {Rouse},
+  title  = {Why Go is skyrocketing in popularity},
+  year   = {2017},
+}
+
+@Article{Garcin,
+  author = {Garcin},
+  title  = {Surveying The Go Database Landscape},
+  year   = {2017},
+}
+
+@Article{Golang,
+  author = {Golang},
+  title  = {The Go Blog},
+  year   = {2018},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}

@@ -1,0 +1,115 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Garcin}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=4985aba87d5be1f92fd832cfac95a741}{%
+           family={Garcin},
+           familyi={G\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{fullhash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{bibnamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authorbibnamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authornamehash}{4985aba87d5be1f92fd832cfac95a741}
+      \strng{authorfullhash}{4985aba87d5be1f92fd832cfac95a741}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Surveying The Go Database Landscape}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.activestate.com/blog/surveying-go-database-landscape/
+      \endverb
+      \verb{url}
+      \verb https://www.activestate.com/blog/surveying-go-database-landscape/
+      \endverb
+    \endentry
+    \entry{Golang}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=eda14e187a768b38eda999457c9cca1e}{%
+           family={Golang},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{fullhash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{bibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorbibnamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authornamehash}{eda14e187a768b38eda999457c9cca1e}
+      \strng{authorfullhash}{eda14e187a768b38eda999457c9cca1e}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Go Blog}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://blog.golang.org
+      \endverb
+      \verb{url}
+      \verb https://blog.golang.org
+      \endverb
+    \endentry
+    \entry{Rouse}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a55990bd020c2bf46a0686c27cb75590}{%
+           family={Rouse},
+           familyi={R\bibinitperiod},
+           given={Jef},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{fullhash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{bibnamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authorbibnamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authornamehash}{a55990bd020c2bf46a0686c27cb75590}
+      \strng{authorfullhash}{a55990bd020c2bf46a0686c27cb75590}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Why Go us skyrocketing in popularity}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://opensource.com/article/17/11/why-go-grows
+      \endverb
+      \verb{url}
+      \verb https://opensource.com/article/17/11/why-go-grows
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
